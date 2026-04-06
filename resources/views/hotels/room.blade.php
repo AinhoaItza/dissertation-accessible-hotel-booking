@@ -215,9 +215,21 @@
                     </dl>
 
                     <div class="border-t border-slate-200 pt-4 space-y-2 text-sm">
+                        @php
+                            $guestLabel = match(true) {
+                                $guests === 1 => '1 guest (−10%)',
+                                $guests === 2 => '2 guests (standard)',
+                                $guests === 3 => '3 guests (+15%)',
+                                default       => $guests . ' guests (+25%)',
+                            };
+                        @endphp
+                        <div class="flex justify-between">
+                            <span class="text-slate-700">{{ $guestLabel }}</span>
+                            <span class="text-slate-900 font-medium">£{{ number_format($pricePerNight, 2) }}/night</span>
+                        </div>
                         <div class="flex justify-between">
                             <span class="text-slate-700">
-                                £{{ number_format($room->price_per_night, 2) }} &times; {{ $nights }} {{ Str::plural('night', $nights) }}
+                                £{{ number_format($pricePerNight, 2) }} &times; {{ $nights }} {{ Str::plural('night', $nights) }}
                             </span>
                             <span class="text-slate-900 font-medium">£{{ number_format($subtotal, 2) }}</span>
                         </div>

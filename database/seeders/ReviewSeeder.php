@@ -175,11 +175,11 @@ class ReviewSeeder extends Seeder
             ],
 
             'hotel-casa-fuster' => [
-                ['author' => 'Isabel Comas',        'rating' => 9,  'comment' => 'The most beautiful building on the Passeig de Gràcia and one of Barcelona\'s greatest Modernista treasures. The Café Vienès jazz sessions on Thursday nights are a genuine cultural event. Exceptional service throughout.'],
-                ['author' => 'Michael Hennessy',    'rating' => 8,  'comment' => 'The rooftop terrace with city views is the best in Barcelona. The swimming pool and bar in summer are perfect. The Modernista architecture throughout the hotel is a delight — every corridor is worth exploring.'],
-                ['author' => 'Àngels Puigdomènech', 'rating' => 5,  'comment' => 'The architecture is irreplaceable but the room I was given had poor soundproofing from the corridor. Busy weekend with other guests clearly audible. The Café Vienès is superb but the restaurant was mediocre.'],
-                ['author' => 'Thomas Becker',       'rating' => 9,  'comment' => 'Stayed here specifically for the building and was not disappointed. The suite on the corner with dual Modernista facade views is one of the most memorable rooms I have ever occupied. Excellent staff.'],
-                ['author' => 'Claire Fontaine',     'rating' => 4,  'comment' => 'The hotel lives on its architectural reputation more than its current service standard. Breakfast was slow and understaffed on both mornings. Room was well-maintained but the bathroom was dated for the price.'],
+                ['author' => 'Isabel Comas',        'rating' => 7,  'comment' => 'Great value for the Passeig de Gràcia location. The room was small but clean, and the Café Vienès downstairs is a real bonus — jazz on Thursday nights is lovely. Do not expect luxury but it is a solid choice.'],
+                ['author' => 'Michael Hennessy',    'rating' => 6,  'comment' => 'The building is stunning but the rooms do not live up to the facade. Thin walls, dated bathroom, and slow breakfast service. The rooftop pool is small and busy in summer. Good location, average experience.'],
+                ['author' => 'Àngels Puigdomènech', 'rating' => 4,  'comment' => 'Very disappointed. The room smelled musty and the air conditioning was noisy all night. Staff were friendly but unable to resolve the issues. For this area of Barcelona there are better options at the same price.'],
+                ['author' => 'Thomas Becker',       'rating' => 7,  'comment' => 'Decent budget stay in a remarkable building. The corridors and public areas are genuinely beautiful. Rooms are basic but clean. WiFi was slow. Would stay again for the location and price, not for the comfort.'],
+                ['author' => 'Claire Fontaine',     'rating' => 5,  'comment' => 'The Modernista architecture sells the hotel but the product is decidedly three-star. Breakfast was a buffet with limited options, housekeeping was inconsistent, and the mattress in our room was overdue for replacement.'],
             ],
 
             'el-palace-barcelona' => [
@@ -207,11 +207,11 @@ class ReviewSeeder extends Seeder
             ],
 
             'palazzo-manfredi' => [
-                ['author' => 'Antonio Lombardi',    'rating' => 10, 'comment' => 'The only hotel in Rome where you wake up to the Colosseum. Every morning I drew the curtains and stood in silence looking at it. The Aroma restaurant is a Michelin-starred experience with the amphitheatre as backdrop.'],
-                ['author' => 'Catherine Eliot',     'rating' => 10, 'comment' => 'Twelve suites, complete privacy, the Colosseum from your bedroom window. There is nothing else like this in Rome or anywhere else. The intimacy and the absolute uniqueness of the location make it irreplaceable.'],
-                ['author' => 'Marco Pellegrini',    'rating' => 6,  'comment' => 'The Colosseum view is extraordinary but the hotel is very small — there is no gym, no pool, and limited facilities. For the rate I expected more than a beautiful view and a good restaurant. Location is everything here.'],
-                ['author' => 'Anna-Karin Lindberg', 'rating' => 9,  'comment' => 'We planned our trip specifically around the Palazzo Manfredi. Sitting on our private terrace at night with the illuminated Colosseum before us while Aroma brought us wine was the highlight of five years of travel.'],
-                ['author' => 'Thomas Holt',         'rating' => 5,  'comment' => 'The view is extraordinary and unique. The suites themselves are pleasant but not luxurious enough to justify the rate without the view premium. If your room doesn\'t directly face the Colosseum, the value case collapses.'],
+                ['author' => 'Antonio Lombardi',    'rating' => 8,  'comment' => 'Unbeatable location next to the Colosseum. The room was basic but comfortable, and the rooftop terrace is a wonderful place to sit in the evening. Great value for central Rome.'],
+                ['author' => 'Catherine Eliot',     'rating' => 6,  'comment' => 'The Colosseum is literally across the road which is amazing, but the room itself was tired — peeling paint near the window and a shower with weak pressure. The location saves it.'],
+                ['author' => 'Marco Pellegrini',    'rating' => 4,  'comment' => 'No gym, no pool, limited facilities. The restaurant on-site was overpriced for the quality. The neighbourhood can be noisy at night from tour groups. Expected more for the price.'],
+                ['author' => 'Anna-Karin Lindberg', 'rating' => 7,  'comment' => 'A good three-star option if you want to be close to the Colosseum without paying five-star prices. The staff were helpful, the room was clean, and the terrace bar is a real highlight at sunset.'],
+                ['author' => 'Thomas Holt',         'rating' => 5,  'comment' => 'Mixed experience. Check-in was slow and the room we were given faced the internal courtyard, not the Colosseum. Had to ask twice to be moved. Location is genuinely excellent once you are settled.'],
             ],
 
             'hotel-hassler-roma' => [
@@ -247,11 +247,11 @@ class ReviewSeeder extends Seeder
             ],
 
             'andaz-tokyo' => [
-                ['author' => 'Ryō Kimura',          'rating' => 10, 'comment' => 'The Andaz occupies floors 47 to 52 of Toranomon Hills and the views are simply extraordinary. Tokyo Bay, Rainbow Bridge, and Fuji on clear days from your bedroom. The Rooftop Bar is the finest in the city.'],
-                ['author' => 'Emma Hartley',        'rating' => 8,  'comment' => 'The most contemporary luxury hotel in Tokyo. The Studio wellness space is excellent and the Tavern grill is consistently good. The Corner Suite with dual aspects is worth the premium for the views alone.'],
-                ['author' => 'Sven Johansson',      'rating' => 6,  'comment' => 'The views are spectacular but the Andaz product felt inconsistent. The rooms are beautiful; the service was occasionally inattentive. For a Hyatt Andaz property at Tokyo rates I expected greater consistency.'],
-                ['author' => 'Natsumi Watanabe',    'rating' => 9,  'comment' => 'The Rooftop Bar at sunset with Mount Fuji in the background is one of Tokyo\'s truly special experiences. The rooms combine Japanese design sensibility with genuine comfort. The onsen bath in the Corner Suite is outstanding.'],
-                ['author' => 'Patrick Cleary',      'rating' => 5,  'comment' => 'Beautiful hotel but the Toranomon Hills location is removed from central Tokyo. The area has little neighbourhood character and evenings outside the hotel are limited. Perfect views, inconvenient for experiencing the city.'],
+                ['author' => 'Ryō Kimura',          'rating' => 7,  'comment' => 'Good value business hotel in Toranomon. Rooms are clean and modern, the WiFi is fast, and the subway access is convenient. The rooftop bar is a nice touch for a three-star property. Would stay again for work trips.'],
+                ['author' => 'Emma Hartley',        'rating' => 6,  'comment' => 'Decent mid-range hotel. The room was smaller than the photos suggested and the air conditioning was noisy. Breakfast was a basic buffet — fine but nothing special. Location is fine for business, quiet for tourism.'],
+                ['author' => 'Sven Johansson',      'rating' => 4,  'comment' => 'Below average for the price. The lift was out of service for part of our stay, housekeeping missed our room on day two, and the front desk were slow to respond to complaints. Needs better management.'],
+                ['author' => 'Natsumi Watanabe',    'rating' => 7,  'comment' => 'A solid three-star choice in central Tokyo. The Tavern restaurant serves straightforward food at fair prices. The rooms are functional and clean. Not exciting, but reliable. Good for a short business stay.'],
+                ['author' => 'Patrick Cleary',      'rating' => 5,  'comment' => 'The Toranomon area has very little going on in the evenings. The hotel itself is fine — clean rooms, friendly staff — but the neighbourhood makes it feel isolated. The subway connection saves it as a practical base.'],
             ],
 
         ];

@@ -11,7 +11,7 @@
             </h1>
             <p class="text-slate-300 text-lg leading-relaxed">
                 Explore hundreds of hotels across London, Paris, Tokyo, New York and more.
-                Built for accessibility — every guest matters.
+                Built for accessibility. Every guest matters.
             </p>
         </div>
         <x-search-form />

@@ -19,13 +19,36 @@ class HotelController extends Controller
     {
         $query = Hotel::query();
 
-        // Free-text destination — match against city or country (case-insensitive)
-        if ($dest = $request->destination()) {
+        // Country filter takes full priority over free-text destination.
+        // When a country is selected, treat it as the active destination too
+        // so the search bar and hidden fields stay in sync.
+        if ($request->filled('country')) {
+            $query->where('country', $request->get('country'));
+            $activeDestination = $request->get('country');
+            $activeCountry     = $request->get('country');
+        } elseif ($dest = $request->destination()) {
             $term = '%' . mb_strtolower($dest) . '%';
             $query->where(fn ($q) => $q
                 ->whereRaw('LOWER(city) LIKE ?', [$term])
                 ->orWhereRaw('LOWER(country) LIKE ?', [$term])
             );
+            $activeDestination = $dest;
+            $activeCountry     = null; // resolved below after pagination
+        } else {
+            $activeDestination = '';
+            $activeCountry     = null;
+        }
+
+        if ($request->boolean('pool')) {
+            $query->where('amenities', 'LIKE', '%Pool%');
+        }
+
+        if ($request->boolean('spa')) {
+            $query->where('amenities', 'LIKE', '%Spa%');
+        }
+
+        if ($request->boolean('breakfast')) {
+            $query->where('amenities', 'LIKE', '%Breakfast Included%');
         }
 
         if ($request->filled('stars')) {
@@ -47,10 +70,19 @@ class HotelController extends Controller
         $hotels    = $query->paginate(12)->withQueryString();
         $countries = Hotel::distinct()->orderBy('country')->pluck('country');
 
+        // If destination search returned results all in one country, auto-select it
+        if ($activeCountry === null && $hotels->isNotEmpty()) {
+            $resultCountries = $hotels->getCollection()->pluck('country')->unique();
+            if ($resultCountries->count() === 1) {
+                $activeCountry = $resultCountries->first();
+            }
+        }
+
         [$checkIn, $checkOut, $guests, $nights] = $this->searchParams($request);
 
         return view('hotels.index', compact(
-            'hotels', 'countries', 'checkIn', 'checkOut', 'guests', 'nights'
+            'hotels', 'countries', 'checkIn', 'checkOut', 'guests', 'nights',
+            'activeDestination', 'activeCountry'
         ));
     }
 

@@ -1,12 +1,19 @@
 @props(['room', 'hotel', 'checkIn', 'checkOut', 'guests', 'nights'])
 
 @php
-$roomUrl   = route('hotels.rooms.show', [$hotel, $room]) . '?' . http_build_query([
+$roomUrl        = route('hotels.rooms.show', [$hotel, $room]) . '?' . http_build_query([
     'check_in'  => $checkIn,
     'check_out' => $checkOut,
     'guests'    => $guests,
 ]);
-$roomTotal = number_format((float) $room->price_per_night * $nights, 0);
+$guestMultiplier = match(true) {
+    $guests >= 4 => 1.25,
+    $guests === 3 => 1.15,
+    $guests === 1 => 0.90,
+    default       => 1.00,
+};
+$adjustedPrice = (float) $room->price_per_night * $guestMultiplier;
+$roomTotal     = number_format($adjustedPrice * $nights, 0);
 @endphp
 
 <article class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm
@@ -63,10 +70,10 @@ $roomTotal = number_format((float) $room->price_per_night * $nights, 0);
 
             <div class="flex items-end justify-between mt-auto gap-4">
                 <div>
-                    <p class="text-slate-700 text-xs">Per night</p>
+                    <p class="text-slate-700 text-xs">Per night &middot; {{ $guests }} {{ Str::plural('guest', $guests) }}</p>
                     {{-- WCAG 1.4.6: blue-900 on white = 8.9:1 --}}
                     <p class="text-2xl font-bold text-blue-900">
-                        £{{ number_format((float) $room->price_per_night, 0) }}
+                        £{{ number_format($adjustedPrice, 0) }}
                     </p>
                     <p class="text-slate-700 text-xs">
                         Total for {{ $nights }} {{ Str::plural('night', $nights) }}:
@@ -80,7 +87,7 @@ $roomTotal = number_format((float) $room->price_per_night * $nights, 0);
                        class="flex items-center justify-center min-h-[44px] px-6 bg-blue-900
                               hover:bg-blue-800 text-white font-semibold rounded text-sm
                               transition-colors shrink-0"
-                       aria-label="Select {{ $room->name }} at £{{ number_format((float) $room->price_per_night, 0) }} per night">
+                       aria-label="Select {{ $room->name }} at £{{ number_format($adjustedPrice, 0) }} per night for {{ $guests }} {{ Str::plural('guest', $guests) }}">
                         Select This Room
                     </a>
                 @else

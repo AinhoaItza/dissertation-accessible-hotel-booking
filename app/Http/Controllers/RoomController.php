@@ -22,13 +22,15 @@ class RoomController extends Controller
 
         [$checkIn, $checkOut, $guests, $nights] = $this->searchParams($request);
 
-        $subtotal = round((float) $room->price_per_night * $nights, 2);
-        $tax      = round($subtotal * 0.20, 2);
-        $total    = round($subtotal + $tax, 2);
+        $multiplier    = $this->guestMultiplier($guests);
+        $pricePerNight = round((float) $room->price_per_night * $multiplier, 2);
+        $subtotal      = round($pricePerNight * $nights, 2);
+        $tax           = round($subtotal * 0.20, 2);
+        $total         = round($subtotal + $tax, 2);
 
         return view('hotels.room', compact(
             'hotel', 'room', 'checkIn', 'checkOut', 'guests', 'nights',
-            'subtotal', 'tax', 'total'
+            'pricePerNight', 'multiplier', 'subtotal', 'tax', 'total'
         ));
     }
 
@@ -52,26 +54,30 @@ class RoomController extends Controller
 
         [$checkIn, $checkOut, $guests, $nights] = $this->searchParams($request);
 
-        $subtotal = round((float) $room->price_per_night * $nights, 2);
-        $tax      = round($subtotal * 0.20, 2);
-        $total    = round($subtotal + $tax, 2);
+        $multiplier    = $this->guestMultiplier($guests);
+        $pricePerNight = round((float) $room->price_per_night * $multiplier, 2);
+        $subtotal      = round($pricePerNight * $nights, 2);
+        $tax           = round($subtotal * 0.20, 2);
+        $total         = round($subtotal + $tax, 2);
 
         $reference = strtoupper('SN-' . date('Ymd') . '-' . random_int(1000, 9999));
 
         session()->flash('booking', [
-            'reference'  => $reference,
-            'first_name' => $validated['first_name'],
-            'last_name'  => $validated['last_name'],
-            'email'      => $validated['email'],
-            'phone'      => $validated['phone'],
-            'requests'   => $validated['requests'] ?? null,
-            'check_in'   => $checkIn,
-            'check_out'  => $checkOut,
-            'guests'     => $guests,
-            'nights'     => $nights,
-            'subtotal'   => $subtotal,
-            'tax'        => $tax,
-            'total'      => $total,
+            'reference'     => $reference,
+            'first_name'    => $validated['first_name'],
+            'last_name'     => $validated['last_name'],
+            'email'         => $validated['email'],
+            'phone'         => $validated['phone'],
+            'requests'      => $validated['requests'] ?? null,
+            'check_in'      => $checkIn,
+            'check_out'     => $checkOut,
+            'guests'        => $guests,
+            'nights'        => $nights,
+            'price_per_night' => $pricePerNight,
+            'multiplier'    => $multiplier,
+            'subtotal'      => $subtotal,
+            'tax'           => $tax,
+            'total'         => $total,
         ]);
 
         return redirect()->route('hotels.rooms.confirmation', [$hotel, $room]);
@@ -100,6 +106,20 @@ class RoomController extends Controller
     // -------------------------------------------------------------------------
     // Helpers
     // -------------------------------------------------------------------------
+
+    /**
+     * Price multiplier based on guest count.
+     * 1 guest: -10%  |  2 guests: base  |  3 guests: +15%  |  4+: +25%
+     */
+    private function guestMultiplier(int $guests): float
+    {
+        return match(true) {
+            $guests >= 4 => 1.25,
+            $guests === 3 => 1.15,
+            $guests === 1 => 0.90,
+            default       => 1.00,
+        };
+    }
 
     /**
      * @return array{string, string, int, int}  [checkIn, checkOut, guests, nights]

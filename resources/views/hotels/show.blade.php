@@ -18,8 +18,67 @@
         </ol>
     </nav>
 
+    {{-- Stay details bar: update dates / guests without leaving the hotel page --}}
+    <div class="bg-white rounded-xl px-5 py-4 mb-6">
+        <form action="{{ route('hotels.show', $hotel) }}" method="GET" novalidate
+              aria-label="Update stay details">
+            <div class="flex flex-wrap items-end gap-4">
+
+                {{-- WCAG 1.4.6: text-slate-900 on white = 16:1 ✓ AAA --}}
+                <div class="flex flex-col gap-1.5">
+                    <label for="hotel-check_in" class="text-sm font-semibold text-slate-900">Check-in</label>
+                    <input type="date" id="hotel-check_in" name="check_in"
+                           value="{{ $checkIn }}"
+                           min="{{ now()->format('Y-m-d') }}"
+                           required aria-required="true"
+                           class="h-11 w-40 px-3 rounded bg-white text-slate-900 text-sm
+                                  border-2 border-slate-300 hover:border-slate-500
+                                  focus:outline-3 focus:outline-offset-2 focus:outline-[#0a4d8c]">
+                </div>
+
+                <div class="flex flex-col gap-1.5">
+                    <label for="hotel-check_out" class="text-sm font-semibold text-slate-900">Check-out</label>
+                    <input type="date" id="hotel-check_out" name="check_out"
+                           value="{{ $checkOut }}"
+                           min="{{ now()->addDay()->format('Y-m-d') }}"
+                           required aria-required="true"
+                           class="h-11 w-40 px-3 rounded bg-white text-slate-900 text-sm
+                                  border-2 border-slate-300 hover:border-slate-500
+                                  focus:outline-3 focus:outline-offset-2 focus:outline-[#0a4d8c]">
+                </div>
+
+                <div class="flex flex-col gap-1.5">
+                    <label for="hotel-guests" class="text-sm font-semibold text-slate-900">Guests</label>
+                    <select id="hotel-guests" name="guests"
+                            class="h-11 w-32 px-3 rounded bg-white text-slate-900 text-sm
+                                   border-2 border-slate-300 hover:border-slate-500
+                                   focus:outline-3 focus:outline-offset-2 focus:outline-[#0a4d8c]">
+                        @foreach (range(1, 6) as $n)
+                            <option value="{{ $n }}" @selected($guests == $n)>
+                                {{ $n }} {{ $n === 1 ? 'Guest' : 'Guests' }}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
+
+                {{-- WCAG 1.4.6: white on blue-900 = 8.12:1 ✓ AAA --}}
+                <button type="submit"
+                        class="min-h-[44px] px-6 py-2.5 bg-blue-900 hover:bg-blue-800 text-white
+                               font-semibold rounded text-sm transition-colors
+                               focus:outline-3 focus:outline-offset-2 focus:outline-[#0a4d8c]">
+                    Update Availability
+                </button>
+
+                <p class="text-slate-700 text-xs self-end pb-2 ml-auto hidden sm:block">
+                    {{ $nights }} {{ Str::plural('night', $nights) }} &middot;
+                    {{ $guests }} {{ Str::plural('guest', $guests) }}
+                </p>
+            </div>
+        </form>
+    </div>
+
     {{-- Hotel hero image — WCAG 1.1.1 --}}
-    <div class="rounded-xl overflow-hidden mb-8 bg-slate-200 aspect-[21/9]">
+    <div class="rounded-xl overflow-hidden mb-8 bg-slate-200 h-48">
         <img src="{{ $hotel->image_path }}"
              alt="{{ $hotel->image_alt }}"
              class="w-full h-full object-cover"
@@ -180,5 +239,23 @@
         </aside>
     </div>
 </div>
+
+<script>
+    (function () {
+        var ci = document.getElementById('hotel-check_in');
+        var co = document.getElementById('hotel-check_out');
+        if (!ci || !co) return;
+        function sync() {
+            if (!ci.value) return;
+            var d = new Date(ci.value);
+            d.setDate(d.getDate() + 1);
+            var min = d.toISOString().split('T')[0];
+            co.min = min;
+            if (!co.value || co.value <= ci.value) co.value = min;
+        }
+        ci.addEventListener('change', sync);
+        sync();
+    }());
+</script>
 
 </x-layout>

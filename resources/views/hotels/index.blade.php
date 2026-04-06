@@ -7,7 +7,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <x-search-form
             :compact="true"
-            :destination="request('destination', '')"
+            :destination="$activeDestination"
             :checkIn="$checkIn"
             :checkOut="$checkOut"
             :guests="$guests"
@@ -43,7 +43,7 @@
                     <input type="hidden" name="check_in"    value="{{ $checkIn }}">
                     <input type="hidden" name="check_out"   value="{{ $checkOut }}">
                     <input type="hidden" name="guests"      value="{{ $guests }}">
-                    <input type="hidden" name="destination" value="{{ request('destination') }}">
+                    <input type="hidden" name="destination" value="{{ $activeDestination }}">
 
                     {{-- Country --}}
                     <div class="mb-6">
@@ -53,12 +53,37 @@
                         <select id="country" name="country"
                                 class="h-11 w-full px-3 border-2 border-slate-300 rounded text-slate-900
                                        text-sm bg-white hover:border-slate-500 transition-colors">
-                            <option value="" @selected(!request('country'))>All countries</option>
+                            <option value="" @selected(!$activeCountry)>All countries</option>
                             @foreach($countries as $c)
-                                <option value="{{ $c }}" @selected(request('country') === $c)>{{ $c }}</option>
+                                <option value="{{ $c }}" @selected($activeCountry === $c)>{{ $c }}</option>
                             @endforeach
                         </select>
                     </div>
+
+                    {{-- Facilities --}}
+                    <fieldset class="mb-6">
+                        <legend class="text-sm font-semibold text-slate-800 mb-3">Facilities</legend>
+                        <div class="space-y-1">
+                            <label class="flex items-center gap-3 min-h-[44px] cursor-pointer">
+                                <input type="checkbox" name="pool" value="1"
+                                       class="size-4 accent-blue-900 rounded"
+                                       @checked(request('pool'))>
+                                <span class="text-slate-800 text-sm">Swimming Pool</span>
+                            </label>
+                            <label class="flex items-center gap-3 min-h-[44px] cursor-pointer">
+                                <input type="checkbox" name="spa" value="1"
+                                       class="size-4 accent-blue-900 rounded"
+                                       @checked(request('spa'))>
+                                <span class="text-slate-800 text-sm">Spa &amp; Wellness</span>
+                            </label>
+                            <label class="flex items-center gap-3 min-h-[44px] cursor-pointer">
+                                <input type="checkbox" name="breakfast" value="1"
+                                       class="size-4 accent-blue-900 rounded"
+                                       @checked(request('breakfast'))>
+                                <span class="text-slate-800 text-sm">Breakfast Included</span>
+                            </label>
+                        </div>
+                    </fieldset>
 
                     {{-- Star Rating --}}
                     <fieldset class="mb-6">
@@ -121,7 +146,7 @@
                         Apply Filters
                     </button>
 
-                    @if(request()->hasAny(['country', 'stars', 'max_price', 'sort']))
+                    @if(request()->hasAny(['country', 'stars', 'max_price', 'sort', 'pool', 'spa', 'breakfast']))
                         <a href="{{ route('hotels.index', ['check_in' => $checkIn, 'check_out' => $checkOut, 'guests' => $guests]) }}"
                            class="flex items-center justify-center w-full min-h-[44px] mt-2 text-slate-700
                                   hover:text-slate-900 border-2 border-slate-300 hover:border-slate-500 rounded

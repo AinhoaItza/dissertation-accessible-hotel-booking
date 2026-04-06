@@ -34,7 +34,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'One of London\'s original grand hotels, The Langham has defined luxury hospitality since 1865. A landmark Portland stone facade, a Michelin-starred restaurant, and the iconic Palm Court for afternoon tea set the standard for the city.',
                 'image_path'   => 'https://images.unsplash.com/photo-1622916053149-008b5a2673d1?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                 'image_alt'    => 'The Langham London exterior on Portland Place, a grand Victorian stone facade',
-                'amenities'    => ['Free WiFi', 'Chuan Body & Soul Spa', 'Palm Court Afternoon Tea', 'Roux at The Landau', 'Fitness Centre', 'Concierge', 'Valet Parking', '24-Hour Room Service'],
+                'amenities'    => ['Free WiFi', 'Chuan Body & Soul Spa', 'Palm Court Afternoon Tea', 'Roux at The Landau', 'Fitness Centre', 'Concierge', 'Valet Parking', '24-Hour Room Service', 'Breakfast Included', 'Smoking Permitted (Designated Areas)'],
             ],
 
             // ── PARIS ─────────────────────────────────────────────────
@@ -52,7 +52,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'A Parisian palace of legendary status on the Place de la Concorde, built in 1758 for Louis XV. Restored to breathtaking splendour with a Les Ambassadeurs cocktail bar, Michelin-starred dining, and a lavender-scented spa.',
                 'image_path'   => 'https://images.unsplash.com/photo-1471623432079-b009d30b6729?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGFyaXMlMjBob3RlbHxlbnwwfHwwfHx8MA%3D%3D',
                 'image_alt'    => 'Hôtel de Crillon on the Place de la Concorde, an 18th-century neoclassical palace',
-                'amenities'    => ['Free WiFi', 'Spa de la Mer', 'Les Ambassadeurs Bar', 'Michelin Dining', 'Concierge', 'Valet Parking', 'Butler Service', '24-Hour Room Service'],
+                'amenities'    => ['Free WiFi', 'Spa de la Mer', 'Les Ambassadeurs Bar', 'Michelin Dining', 'Concierge', 'Valet Parking', 'Butler Service', '24-Hour Room Service', 'Smoking Permitted (Designated Areas)'],
             ],
 
             // ── BARCELONA ────────────────────────────────────────────
@@ -70,7 +70,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'A 44-storey tower on Barceloneta beach, internationally recognised for its contemporary art collection and two pools overlooking the Mediterranean. Home to Enoteca Paco Pérez, holder of two Michelin stars.',
                 'image_path'   => 'https://images.unsplash.com/photo-1630219694734-fe47ab76b15e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8QmFyY2Vsb25hfGVufDB8fDB8fHww',
                 'image_alt'    => 'Hotel Arts Barcelona tower rising above Barceloneta beach and the Mediterranean',
-                'amenities'    => ['Free WiFi', 'Beach Club Pool', 'Enoteca (2 Michelin Stars)', 'Spa & Fitness', 'Concierge', 'Valet Parking', 'Direct Beach Access', 'Room Service'],
+                'amenities'    => ['Free WiFi', 'Beach Club Pool', 'Enoteca (2 Michelin Stars)', 'Spa & Fitness', 'Concierge', 'Valet Parking', 'Direct Beach Access', 'Room Service', 'Breakfast Included', 'Non-Smoking Property'],
             ],
 
             // ── ROME ──────────────────────────────────────────────────
@@ -88,7 +88,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'A Rocco Forte masterpiece at the foot of the Pincian Hill, with a legendary terraced garden that has hosted Picasso and Stravinsky. The Stravinskij Bar is Rome\'s most celebrated meeting place for artists and diplomats.',
                 'image_path'   => 'https://images.unsplash.com/photo-1626285220266-e35bd313d05b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHJvbWF8ZW58MHx8MHx8fDA%3D',
                 'image_alt'    => 'Hotel de Russie facade on Via del Babuino near the Piazza del Popolo, Rome',
-                'amenities'    => ['Free WiFi', 'Terraced Garden', 'Stravinskij Bar', 'De Russie Spa', 'Fitness Centre', 'Concierge', 'Valet Parking', 'Restaurant'],
+                'amenities'    => ['Free WiFi', 'Terraced Garden', 'Stravinskij Bar', 'De Russie Spa', 'Fitness Centre', 'Concierge', 'Valet Parking', 'Restaurant', 'Breakfast Included', 'Non-Smoking Property'],
             ],
 
             // ── TOKYO ─────────────────────────────────────────────────
@@ -106,7 +106,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'Immortalised by Lost in Translation, the Park Hyatt occupies the top 14 floors of the Shinjuku Park Tower. Floor-to-ceiling views of Mount Fuji, a 20-metre pool bathed in natural light, and the legendary New York Bar.',
                 'image_path'   => 'https://images.unsplash.com/photo-1745595330140-9ee41e4cc395?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dG9reW8lMjBob3RlbCUyMHRyYWRpdGlvbmFsfGVufDB8fDB8fHww',
                 'image_alt'    => 'Park Hyatt Tokyo in the Shinjuku Park Tower with the city at night below',
-                'amenities'    => ['Free WiFi', 'New York Bar & Grill', 'Heated Pool & Gym', 'Onsen Spa', 'Concierge', 'Airport Limousine', 'Tea Ceremony', '24-Hour Room Service'],
+                'amenities'    => ['Free WiFi', 'New York Bar & Grill', 'Heated Pool & Gym', 'Onsen Spa', 'Traditional Sauna', 'Concierge', 'Airport Limousine', 'Tea Ceremony', '24-Hour Room Service', 'Breakfast Included', 'Smoking Permitted (Designated Areas)'],
             ],
 
             // ── NEW YORK ──────────────────────────────────────────────
@@ -124,7 +124,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'New York\'s most iconic hotel at the corner of Fifth Avenue and Central Park South since 1907. The Eloise Suite, the Rose Club bar, and the Palm Court are woven into the city\'s cultural fabric.',
                 'image_path'   => 'https://images.unsplash.com/photo-1676412146949-0d8538338292?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG5ldyUyMHlvcmslMjBob3RlbHxlbnwwfHwwfHx8MA%3D%3D',
                 'image_alt'    => 'The Plaza Hotel facade on Fifth Avenue with Central Park visible in the background',
-                'amenities'    => ['Free WiFi', 'The Palm Court', 'Rose Club Bar', 'Plaza Beauty Spa', 'Fitness Centre', 'Concierge', 'Valet Parking', 'Butler Service'],
+                'amenities'    => ['Free WiFi', 'The Palm Court', 'Rose Club Bar', 'Plaza Beauty Spa', 'Fitness Centre', 'Concierge', 'Valet Parking', 'Butler Service', 'Breakfast Included', 'Non-Smoking Property'],
             ],
 
             // ── NEW YORK (additional) ─────────────────────────────────
@@ -142,7 +142,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'The crown jewel of Fifth Avenue since 1904, the St. Regis New York set the standard for American luxury hospitality. The legendary King Cole Bar with its original Maxfield Parrish mural, birthplace of the Bloody Mary, and the unmatched St. Regis Butler Service define an institution that has hosted every US president since Theodore Roosevelt.',
                 'image_path'   => 'https://images.unsplash.com/photo-1476837754190-8036496cea40?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG5ldyUyMHlvcmt8ZW58MHx8MHx8fDA%3D',
                 'image_alt'    => 'The St. Regis New York Beaux-Arts facade on Fifth Avenue at 55th Street',
-                'amenities'    => ['Free WiFi', 'King Cole Bar', 'Astor Court Restaurant', 'Remède Spa', 'Fitness Centre', '24-Hr Butler Service', 'Concierge', 'Valet Parking'],
+                'amenities'    => ['Free WiFi', 'King Cole Bar', 'Astor Court Restaurant', 'Remède Spa', 'Fitness Centre', '24-Hr Butler Service', 'Concierge', 'Valet Parking', 'Smoking Permitted (Designated Areas)'],
             ],
 
             [
@@ -159,7 +159,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'I.M. Pei\'s soaring 52-storey limestone tower on East 57th Street is one of New York\'s great architectural achievements. The tallest hotel in the city when it opened in 1993, it commands sweeping views from the Hudson to the East River. The renowned Ty Bar, the I.M. Pei-designed lobby, and the award-winning spa set the standard for contemporary Manhattan luxury.',
                 'image_path'   => 'https://plus.unsplash.com/premium_photo-1675974256267-1f2f64589948?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bmV3JTIweW9yayUyMGJ1aWxkaW5nfGVufDB8fDB8fHww',
                 'image_alt'    => 'Four Seasons Hotel New York I.M. Pei limestone tower on East 57th Street',
-                'amenities'    => ['Free WiFi', 'The Garden Restaurant', 'Ty Bar', 'Spa & Wellness', 'Indoor Pool', 'Fitness Centre', 'Concierge', 'Valet Parking'],
+                'amenities'    => ['Free WiFi', 'The Garden Restaurant', 'Ty Bar', 'Spa & Wellness', 'Indoor Pool', 'Fitness Centre', 'Concierge', 'Valet Parking', 'Breakfast Included', 'Non-Smoking Property'],
             ],
 
             [
@@ -176,7 +176,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'The art deco tower on Madison Avenue has been New York\'s most discreet address since 1930. Bemelmans Bar, with Ludwig Bemelmans\' original Madeline murals, and the Café Carlyle — where Bobby Short played for 36 years — are irreplaceable pieces of New York cultural life. Every US president since Truman has stayed in the Presidential Suite.',
                 'image_path'   => 'https://images.unsplash.com/photo-1513343499931-6bf7e0dc4e1a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bmV3JTIweW9yayUyMGJ1aWxkaW5nfGVufDB8fDB8fHww',
                 'image_alt'    => 'The Carlyle art deco tower on Madison Avenue and 76th Street, Upper East Side',
-                'amenities'    => ['Free WiFi', 'Bemelmans Bar', 'Café Carlyle', 'Dowling\'s Restaurant', 'The Carlyle Spa', 'Fitness Centre', 'Concierge', 'Butler Service'],
+                'amenities'    => ['Free WiFi', 'Bemelmans Bar', 'Café Carlyle', 'Dowling\'s Restaurant', 'The Carlyle Spa', 'Fitness Centre', 'Concierge', 'Butler Service', 'Smoking Permitted (Designated Areas)'],
             ],
 
             [
@@ -193,7 +193,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'The world\'s first hotel by the legendary French crystal house, opened in 2015 opposite MoMA. Every surface — from the 9,000-crystal chandelier in the Grand Salon to the Baccarat crystal glasses in every room — reflects the house\'s 250-year obsession with light. The Grand Salon bar, Chevalier restaurant, and the Spa de La Mer make it the most opulent address in modern Manhattan.',
                 'image_path'   => 'https://images.unsplash.com/photo-1665399319567-9cb6afca3e38?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG5ldyUyMHlvcmslMjBidWlsZGluZ3xlbnwwfHwwfHx8MA%3D%3D',
                 'image_alt'    => 'Baccarat Hotel New York facade on West 53rd Street opposite MoMA',
-                'amenities'    => ['Free WiFi', 'Grand Salon Bar', 'Chevalier Restaurant', 'Spa de La Mer', 'Indoor Pool', 'Fitness Centre', 'Concierge', 'Butler Service'],
+                'amenities'    => ['Free WiFi', 'Grand Salon Bar', 'Chevalier Restaurant', 'Spa de La Mer', 'Indoor Pool', 'Fitness Centre', 'Concierge', 'Butler Service', 'Non-Smoking Property'],
             ],
 
             // ── LONDON (additional) ───────────────────────────────────
@@ -211,7 +211,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'London\'s first luxury hotel, opened in 1889 on the Strand beside the Thames. The Savoy invented the modern cocktail bar, pioneered en-suite bathrooms, and hosted Monet, Chaplin and Churchill. Its art deco and Edwardian interiors remain unmatched.',
                 'image_path'   => 'https://images.unsplash.com/photo-1609511592700-597724098775?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                 'image_alt'    => 'The Savoy hotel entrance on the Strand with its distinctive forecourt',
-                'amenities'    => ['Free WiFi', 'Thames Foyer Afternoon Tea', 'American Bar', 'Savoy Spa', 'Fitness Centre', 'Concierge', 'Valet Parking', '24-Hour Room Service'],
+                'amenities'    => ['Free WiFi', 'Thames Foyer Afternoon Tea', 'American Bar', 'Savoy Spa', 'Fitness Centre', 'Concierge', 'Valet Parking', '24-Hour Room Service', 'Smoking Permitted (Designated Areas)'],
             ],
 
             [
@@ -228,7 +228,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'Mayfair\'s art deco masterpiece and the traditional maternity ward of European royalty. Claridge\'s has hosted every reigning monarch since Queen Victoria, and its black-and-white marble lobby is one of the world\'s most photographed hotel interiors.',
                 'image_path'   => 'https://images.unsplash.com/photo-1750594097768-4a1c3692fde6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGxvbmRvbiUyMGhvdGVsfGVufDB8fDB8fHww',
                 'image_alt'    => 'Claridge\'s hotel art deco facade on Brook Street in Mayfair',
-                'amenities'    => ['Free WiFi', 'Claridge\'s Bar', 'Fera at Claridge\'s', 'The Fumoir', 'Spa & Fitness', 'Concierge', 'Valet Parking', 'Butler Service'],
+                'amenities'    => ['Free WiFi', 'Claridge\'s Bar', 'Fera at Claridge\'s', 'The Fumoir', 'Spa & Fitness', 'Concierge', 'Valet Parking', 'Butler Service', 'Non-Smoking Property'],
             ],
 
             [
@@ -245,7 +245,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'Opened in 1906, The Ritz London is the ultimate expression of Edwardian grandeur on Piccadilly. Its gilded Palm Court is the world\'s most famous afternoon tea room, and its Louis XVI dining room overlooks Green Park with a view unchanged for over a century.',
                 'image_path'   => 'https://images.unsplash.com/photo-1725139381713-b4d7e0113c1f?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                 'image_alt'    => 'The Ritz London Piccadilly facade with its distinctive colonnaded arcade',
-                'amenities'    => ['Free WiFi', 'The Palm Court', 'The Ritz Restaurant', 'The Ritz Club', 'Concierge', 'Valet Parking', 'Butler Service', '24-Hour Room Service'],
+                'amenities'    => ['Free WiFi', 'The Palm Court', 'The Ritz Restaurant', 'The Ritz Club', 'Concierge', 'Valet Parking', 'Butler Service', '24-Hour Room Service', 'Breakfast Included', 'Non-Smoking Property'],
             ],
 
             [
@@ -262,7 +262,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'A Mayfair institution of quiet, understated perfection since 1917. Home to the three-Michelin-starred Hélène Darroze restaurant and the legendary Connaught Bar, consistently ranked the world\'s best cocktail bar. Discreet, gracious, irreplaceable.',
                 'image_path'   => 'https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                 'image_alt'    => 'The Connaught hotel entrance on Carlos Place in Mayfair',
-                'amenities'    => ['Free WiFi', 'Connaught Bar', 'Hélène Darroze (3 Michelin Stars)', 'Jean-Georges', 'Aman Spa', 'Concierge', 'Valet Parking', 'Butler Service'],
+                'amenities'    => ['Free WiFi', 'Connaught Bar', 'Hélène Darroze (3 Michelin Stars)', 'Jean-Georges', 'Aman Spa', 'Concierge', 'Valet Parking', 'Butler Service', 'Non-Smoking Property'],
             ],
 
             // ── PARIS (additional) ────────────────────────────────────
@@ -280,7 +280,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'On the most prestigious shopping street in the world, Le Bristol Paris is a palace hotel of remarkable warmth. Épicure holds three Michelin stars, the rooftop pool surveys the Paris skyline, and the resident cat Fa-Raon is an institution in his own right.',
                 'image_path'   => 'https://plus.unsplash.com/premium_photo-1718285692131-ca20720a5f3a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cGFyaXMlMjBob3RlbHxlbnwwfHwwfHx8MA%3D%3D',
                 'image_alt'    => 'Le Bristol Paris hotel facade on Rue du Faubourg Saint-Honoré',
-                'amenities'    => ['Free WiFi', 'Épicure (3 Michelin Stars)', 'Rooftop Pool', 'Le Bristol Spa', 'Fitness Centre', 'Concierge', 'Valet Parking', 'Butler Service'],
+                'amenities'    => ['Free WiFi', 'Épicure (3 Michelin Stars)', 'Rooftop Pool', 'Le Bristol Spa', 'Fitness Centre', 'Concierge', 'Valet Parking', 'Butler Service', 'Breakfast Included', 'Non-Smoking Property'],
             ],
 
             [
@@ -297,7 +297,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'An art deco palace steps from the Champs-Élysées, celebrated for its extraordinary flower arrangements and three Michelin-starred restaurants. The marble galleries, inner courtyard, and legendary spa make it one of the world\'s most complete luxury hotels.',
                 'image_path'   => 'https://images.unsplash.com/photo-1609885728229-5f48bab0cf87?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHBhciVDMyVBRHMlMjBlZGlmaWNpb3N8ZW58MHx8MHx8fDA%3D',
                 'image_alt'    => 'Four Seasons Hotel George V facade on Avenue George V near the Champs-Élysées',
-                'amenities'    => ['Free WiFi', 'Le Cinq (3 Michelin Stars)', 'Le George', 'L\'Orangerie', 'Spa George V', 'Indoor Pool', 'Concierge', 'Butler Service'],
+                'amenities'    => ['Free WiFi', 'Le Cinq (3 Michelin Stars)', 'Le George', 'L\'Orangerie', 'Spa George V', 'Indoor Pool', 'Concierge', 'Butler Service', 'Breakfast Included', 'Non-Smoking Property'],
             ],
 
             [
@@ -314,7 +314,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'A sleek contemporary palace on Rue Saint-Honoré, home to one of Paris\'s most celebrated spas. The Camélia restaurant holds a Michelin star, the bar garden is an oasis of calm steps from the Tuileries, and every room is a study in refined French design.',
                 'image_path'   => 'https://images.unsplash.com/photo-1660080995209-f4484c94979b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHBhciVDMyVBRHMlMjBlZGlmaWNpb3N8ZW58MHx8MHx8fDA%3D',
                 'image_alt'    => 'Mandarin Oriental Paris exterior on Rue Saint-Honoré near the Tuileries',
-                'amenities'    => ['Free WiFi', 'Camélia (1 Michelin Star)', 'Bar 8', 'Spa Mandarin Oriental', 'Fitness Centre', 'Concierge', 'Valet Parking', 'Room Service'],
+                'amenities'    => ['Free WiFi', 'Camélia (1 Michelin Star)', 'Bar 8', 'Spa Mandarin Oriental', 'Fitness Centre', 'Concierge', 'Valet Parking', 'Room Service', 'Non-Smoking Property'],
             ],
 
             [
@@ -331,7 +331,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'The palace of kings and artists, overlooking the Tuileries Garden since 1835. Le Meurice restaurant holds two Michelin stars. Salvador Dalí held court here every winter. The Belle Étoile penthouse is the highest terrace in Paris, with the Eiffel Tower in unobstructed view.',
                 'image_path'   => 'https://images.unsplash.com/photo-1549144511-f099e773c147?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGFyJUMzJUFEc3xlbnwwfHwwfHx8MA%3D%3D',
                 'image_alt'    => 'Le Meurice hotel facade on Rue de Rivoli overlooking the Tuileries Garden',
-                'amenities'    => ['Free WiFi', 'Le Meurice Restaurant (2 Michelin Stars)', 'Bar 228', 'Spa Valmont', 'Fitness Centre', 'Concierge', 'Valet Parking', 'Butler Service'],
+                'amenities'    => ['Free WiFi', 'Le Meurice Restaurant (2 Michelin Stars)', 'Bar 228', 'Spa Valmont', 'Fitness Centre', 'Concierge', 'Valet Parking', 'Butler Service', 'Smoking Permitted (Designated Areas)'],
             ],
 
             // ── BARCELONA (additional) ────────────────────────────────
@@ -349,7 +349,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'The iconic sail-shaped W Barcelona rises directly from the sea at the tip of Barceloneta beach. Its wave-shaped architecture, two rooftop pools, Wave and Bravo restaurants, and the AWAY Spa make it the most distinctive hotel on the Barcelona waterfront.',
                 'image_path'   => 'https://images.unsplash.com/photo-1733437473707-630d50915364?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QmFyY2Vsb25hJTIwaG90ZWx8ZW58MHx8MHx8fDA%3D',
                 'image_alt'    => 'W Barcelona sail-shaped tower rising from Barceloneta beach and the Mediterranean',
-                'amenities'    => ['Free WiFi', 'Wave Restaurant', 'Bravo Beach Club', 'AWAY Spa', 'WET & DRY Pools', 'Fitness Centre', 'Direct Beach Access', 'Concierge'],
+                'amenities'    => ['Free WiFi', 'Wave Restaurant', 'Bravo Beach Club', 'AWAY Spa', 'WET & DRY Pools', 'Fitness Centre', 'Direct Beach Access', 'Concierge', 'Smoking Permitted (Designated Areas)'],
             ],
 
             [
@@ -366,7 +366,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'A beautifully restored 1950s bank building on the most celebrated boulevard in Barcelona. The two Michelin-starred Moments restaurant, a terrace pool overlooking Modernista facades, and the spa\'s traditional Asian wellness programmes place it among the finest hotels in Spain.',
                 'image_path'   => 'https://images.unsplash.com/photo-1614636059458-b5a692cff3cb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fEJhcmNlbG9uYSUyMGhvdGVsfGVufDB8fDB8fHww',
                 'image_alt'    => 'Mandarin Oriental Barcelona facade on the Passeig de Gràcia boulevard',
-                'amenities'    => ['Free WiFi', 'Moments (2 Michelin Stars)', 'Blanc Restaurant', 'Terrace Pool', 'Spa MO', 'Fitness Centre', 'Concierge', 'Butler Service'],
+                'amenities'    => ['Free WiFi', 'Moments (2 Michelin Stars)', 'Blanc Restaurant', 'Terrace Pool', 'Spa MO', 'Fitness Centre', 'Concierge', 'Butler Service', 'Non-Smoking Property'],
             ],
 
             [
@@ -376,14 +376,14 @@ class HotelSeeder extends Seeder
                 'country'      => 'Spain',
                 'area'         => 'Gràcia',
                 'address'      => 'Passeig de Gràcia, 132, 08008 Barcelona',
-                'star_rating'  => 5,
-                'min_price'    => 280.00,
-                'rating'       => 4.7,
-                'review_count' => 1234,
-                'description'  => 'Barcelona\'s most celebrated Modernista hotel, designed by Lluís Domènech i Montaner in 1908. The rooftop terrace commands panoramic city views, the Vienès jazz bar has been the heartbeat of Barcelona\'s cultural scene for decades, and the ornate facade is a protected national monument.',
+                'star_rating'  => 3,
+                'min_price'    => 110.00,
+                'rating'       => 3.6,
+                'review_count' => 548,
+                'description'  => 'A budget-friendly stay inside one of Barcelona\'s iconic Modernista buildings on Passeig de Gràcia. Rooms are modest but comfortable, and the Café Vienès jazz bar on the ground floor draws locals and tourists alike. The rooftop terrace has city views and a small outdoor pool, though facilities are limited compared to nearby luxury hotels.',
                 'image_path'   => 'https://images.unsplash.com/photo-1600813547757-39c40da12c8d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fEJhcmNlbG9uYSUyMGhvdGVsfGVufDB8fDB8fHww',
                 'image_alt'    => 'Hotel Casa Fuster ornate Modernista facade at the top of the Passeig de Gràcia',
-                'amenities'    => ['Free WiFi', 'Café Vienès Jazz Bar', 'Rooftop Pool', 'Terrace Bar', 'Spa & Fitness', 'Concierge', 'Valet Parking', 'Room Service'],
+                'amenities'    => ['Free WiFi', 'Café Vienès Jazz Bar', 'Rooftop Pool', 'Terrace Bar', 'Spa & Fitness', 'Concierge', 'Valet Parking', 'Room Service', 'Smoking Permitted (Designated Areas)'],
             ],
 
             [
@@ -400,7 +400,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'A Beaux-Arts palace on the Gran Via since 1919, combining Catalan heritage with contemporary luxury. The rooftop terrace and pool with Eixample views, the Mezzanine cocktail bar, and La Dolce Vita restaurant have made El Palace a Barcelona institution for over a century.',
                 'image_path'   => 'https://images.unsplash.com/photo-1666990295454-6635caa4095e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8QmFyY2Vsb25hJTIwZWRpZmljaW9zfGVufDB8fDB8fHww',
                 'image_alt'    => 'El Palace Barcelona Beaux-Arts facade on the Gran Via de les Corts Catalanes',
-                'amenities'    => ['Free WiFi', 'La Dolce Vita Restaurant', 'Mezzanine Bar', 'Rooftop Pool & Terrace', 'Spa', 'Fitness Centre', 'Concierge', 'Valet Parking'],
+                'amenities'    => ['Free WiFi', 'La Dolce Vita Restaurant', 'Mezzanine Bar', 'Rooftop Pool & Terrace', 'Spa', 'Fitness Centre', 'Concierge', 'Valet Parking', 'Breakfast Included', 'Non-Smoking Property'],
             ],
 
             // ── ROME (additional) ─────────────────────────────────────
@@ -418,7 +418,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'Perched on Monte Mario with the most sweeping panorama in Rome, the Cavalieri houses one of Italy\'s finest private art collections. The three-Michelin-starred La Pergola, three pools, and 15 acres of Mediterranean parkland make it the most complete luxury resort in the Italian capital.',
                 'image_path'   => 'https://images.unsplash.com/photo-1529260830199-42c24126f198?w=800&h=500&fit=crop&auto=format&q=80',
                 'image_alt'    => 'Rome Cavalieri hotel on Monte Mario with panoramic view of the Roman skyline',
-                'amenities'    => ['Free WiFi', 'La Pergola (3 Michelin Stars)', 'Three Pools', 'Tennis Courts', 'Spa', 'Fitness Centre', 'Shuttle Service', 'Concierge'],
+                'amenities'    => ['Free WiFi', 'La Pergola (3 Michelin Stars)', 'Three Pools', 'Tennis Courts', 'Spa', 'Fitness Centre', 'Shuttle Service', 'Concierge', 'Smoking Permitted (Designated Areas)'],
             ],
 
             [
@@ -435,7 +435,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'A Dorchester Collection jewel on the Pincian Hill with a rooftop restaurant offering what Audrey Hepburn called the most beautiful view in Rome. Il Giardino holds a Michelin star, and the hotel\'s intimate scale and legendary discretion attract the world\'s most discerning travellers.',
                 'image_path'   => 'https://images.unsplash.com/photo-1643049751039-5e112a5953ae?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cm9tYSUyMGhvdGVsfGVufDB8fDB8fHww',
                 'image_alt'    => 'Hotel Eden Rome facade on Via Ludovisi near the Via Veneto',
-                'amenities'    => ['Free WiFi', 'Il Giardino (1 Michelin Star)', 'Rooftop Terrace Bar', 'Spa Eden', 'Fitness Centre', 'Concierge', 'Valet Parking', 'Butler Service'],
+                'amenities'    => ['Free WiFi', 'Il Giardino (1 Michelin Star)', 'Rooftop Terrace Bar', 'Spa Eden', 'Fitness Centre', 'Concierge', 'Valet Parking', 'Butler Service', 'Breakfast Included', 'Non-Smoking Property'],
             ],
 
             [
@@ -445,14 +445,14 @@ class HotelSeeder extends Seeder
                 'country'      => 'Italy',
                 'area'         => 'Colosseum',
                 'address'      => 'Via Labicana, 125, 00184 Roma',
-                'star_rating'  => 5,
-                'min_price'    => 350.00,
-                'rating'       => 4.8,
-                'review_count' => 987,
-                'description'  => 'The only boutique hotel in Rome with a direct, unobstructed view of the Colosseum from every room and terrace. The Michelin-starred Aroma restaurant is named Italy\'s most spectacular dining view. Twelve suites, absolute privacy, and the ancient amphitheatre as your permanent backdrop.',
+                'star_rating'  => 3,
+                'min_price'    => 130.00,
+                'rating'       => 3.8,
+                'review_count' => 421,
+                'description'  => 'A small guesthouse near the Colosseum offering affordable rooms in a central Rome location. Some rooms have partial views of the ancient amphitheatre. Facilities are basic — no pool or spa — but the rooftop terrace is a pleasant spot for an evening drink.',
                 'image_path'   => 'https://images.unsplash.com/photo-1745356553348-bb9b4e7cd2b8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHJvbWElMjBob3RlbHxlbnwwfHwwfHx8MA%3D%3D',
                 'image_alt'    => 'Palazzo Manfredi rooftop terrace with direct view of the Colosseum in Rome',
-                'amenities'    => ['Free WiFi', 'Aroma Restaurant (1 Michelin Star)', 'Colosseum View Terrace', 'Rooftop Bar', 'Spa', 'Concierge', 'Valet Parking', 'Room Service'],
+                'amenities'    => ['Free WiFi', 'Aroma Restaurant', 'Colosseum View Terrace', 'Rooftop Bar', 'Concierge', 'Room Service', 'Non-Smoking Property'],
             ],
 
             [
@@ -469,7 +469,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'Crowning the top of the Spanish Steps for over 130 years, the Hassler Roma is the supreme address in the city. The rooftop Imàgo restaurant holds a Michelin star and commands the finest view in Rome. Preferred by royalty, heads of state, and Hollywood stars since the golden age of Italian cinema.',
                 'image_path'   => 'https://images.unsplash.com/photo-1670792373724-39fd52df804e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHJvbWElMjBob3RlbHxlbnwwfHwwfHx8MA%3D%3D',
                 'image_alt'    => 'Hotel Hassler Roma at the top of the Spanish Steps at Trinità dei Monti',
-                'amenities'    => ['Free WiFi', 'Imàgo (1 Michelin Star)', 'Rooftop Terrace', 'Hassler Bar', 'Concierge', 'Valet Parking', 'Butler Service', '24-Hour Room Service'],
+                'amenities'    => ['Free WiFi', 'Imàgo (1 Michelin Star)', 'Rooftop Terrace', 'Hassler Bar', 'Concierge', 'Valet Parking', 'Butler Service', '24-Hour Room Service', 'Smoking Permitted (Designated Areas)'],
             ],
 
             // ── TOKYO (additional) ────────────────────────────────────
@@ -487,7 +487,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'Positioned between the Imperial Palace and Ginza, The Peninsula Tokyo occupies a 24-storey tower commanding views of the Imperial gardens and city skyline. The Peter rooftop bar, Michelin-recognised Hei Fung Terrace, and the Peninsula Spa define Japanese urban luxury at its most refined.',
                 'image_path'   => 'https://images.unsplash.com/photo-1723382056183-823d065ae8ed?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8a3lvdG8lMjB0cmFkaWNvbmFsJTIwaG90ZWx8ZW58MHx8MHx8fDA%3D',
                 'image_alt'    => 'The Peninsula Tokyo tower between the Imperial Palace and Ginza at night',
-                'amenities'    => ['Free WiFi', 'Peter Rooftop Bar', 'Hei Fung Terrace', 'Peninsula Spa', 'Heated Pool', 'Fitness Centre', 'Concierge', 'Limousine Service'],
+                'amenities'    => ['Free WiFi', 'Peter Rooftop Bar', 'Hei Fung Terrace', 'Peninsula Spa', 'Heated Pool', 'Fitness Centre', 'Concierge', 'Limousine Service', 'Breakfast Included', 'Non-Smoking Property'],
             ],
 
             [
@@ -504,7 +504,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'Aman\'s debut in Japan occupies the top six floors of the Otemachi Tower, with floor-to-ceiling views of the Imperial Palace gardens and Mount Fuji. The 30-metre cedar and stone pool, Arva restaurant, and the Aman Spa blend Japanese minimalism with Aman\'s legendary silence.',
                 'image_path'   => 'https://plus.unsplash.com/premium_photo-1723983555804-4f76968a2a2d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8a3lvdG8lMjB0cmFkaWNvbmFsJTIwaG90ZWx8ZW58MHx8MHx8fDA%3D',
                 'image_alt'    => 'Aman Tokyo in the Otemachi Tower with Imperial Palace garden views',
-                'amenities'    => ['Free WiFi', 'Arva Restaurant', 'The Restaurant', '30m Cedar & Stone Pool', 'Aman Spa', 'Yoga Studio', 'Concierge', 'Limousine Service'],
+                'amenities'    => ['Free WiFi', 'Arva Restaurant', 'The Restaurant', '30m Cedar & Stone Pool', 'Aman Spa', 'Traditional Sauna', 'Yoga Studio', 'Concierge', 'Limousine Service', 'Non-Smoking Property'],
             ],
 
             [
@@ -521,7 +521,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'Built within the UNESCO-listed Tokyo Station, a national treasure of Taisho-era red brick architecture completed in 1914. Original dome lobbies, hand-restored corridors, and rooms overlooking the Imperial Palace gardens make this a living monument to Meiji and Taisho Japan.',
                 'image_path'   => 'https://images.unsplash.com/photo-1549693578-d683be217e58?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dG9reW98ZW58MHx8MHx8fDA%3D',
                 'image_alt'    => 'The Tokyo Station Hotel inside the historic red-brick Tokyo Station building',
-                'amenities'    => ['Free WiFi', 'Torcia (Italian Dining)', 'Brasserie 1899', 'Oak Door Bar', 'Imperial Palace View', 'Spa & Fitness', 'Concierge', 'Historic Architecture'],
+                'amenities'    => ['Free WiFi', 'Torcia (Italian Dining)', 'Brasserie 1899', 'Oak Door Bar', 'Imperial Palace View', 'Spa & Fitness', 'Traditional Sauna', 'Concierge', 'Historic Architecture', 'Smoking Permitted (Designated Areas)'],
             ],
 
             [
@@ -531,14 +531,14 @@ class HotelSeeder extends Seeder
                 'country'      => 'Japan',
                 'area'         => 'Toranomon',
                 'address'      => '1-23-4 Toranomon, Minato-ku, Tokyo 105-0001',
-                'star_rating'  => 5,
-                'min_price'    => 340.00,
-                'rating'       => 4.7,
-                'review_count' => 1543,
-                'description'  => 'Perched on the upper floors of Toranomon Hills, Andaz Tokyo commands panoramic views of Tokyo Bay, Rainbow Bridge, and Mount Fuji on clear mornings. The Rooftop Bar, Tavern grill, and Studio wellness space bring a contemporary edge to Japanese luxury hospitality.',
+                'star_rating'  => 3,
+                'min_price'    => 95.00,
+                'rating'       => 3.5,
+                'review_count' => 389,
+                'description'  => 'A modern business hotel in Toranomon with clean, functional rooms and easy access to the subway. The rooftop bar offers city views and the Tavern restaurant serves straightforward meals. A practical base for exploring Tokyo without the luxury price tag.',
                 'image_path'   => 'https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRva3lvfGVufDB8fDB8fHww',
                 'image_alt'    => 'Andaz Tokyo Toranomon Hills with Tokyo Bay and Rainbow Bridge views',
-                'amenities'    => ['Free WiFi', 'Rooftop Bar', 'Tavern Restaurant', 'Studio Wellness', 'Tokyo Bay View', 'Fitness Centre', 'Concierge', 'Valet Parking'],
+                'amenities'    => ['Free WiFi', 'Rooftop Bar', 'Tavern Restaurant', 'Studio Wellness', 'Tokyo Bay View', 'Fitness Centre', 'Concierge', 'Valet Parking', 'Non-Smoking Property'],
             ],
 
         ];

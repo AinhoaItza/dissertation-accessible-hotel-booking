@@ -2,7 +2,6 @@
 .DS_Store
 .agents/
 skills-lock.json
-CLAUDE.md
 .env
 .env.backup
 .env.production

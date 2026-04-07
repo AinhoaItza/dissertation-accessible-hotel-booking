@@ -29,9 +29,7 @@
 
     <div class="flex flex-col lg:flex-row gap-8">
 
-        {{-- ====================================================
-             FILTER SIDEBAR
-             ==================================================== --}}
+        {{-- FILTER SIDEBAR --}}
         <aside class="w-full lg:w-64 shrink-0" aria-labelledby="filters-heading">
             <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm">
 
@@ -64,50 +62,146 @@
                     <fieldset class="mb-6">
                         <legend class="text-sm font-semibold text-slate-800 mb-3">Facilities</legend>
                         <div class="space-y-1">
-                            <label class="flex items-center gap-3 min-h-[44px] cursor-pointer">
+                            <label class="flex items-center gap-3 min-h-[44px] px-2 rounded-md cursor-pointer hover:bg-slate-100 transition-colors">
                                 <input type="checkbox" name="pool" value="1"
-                                       class="size-4 accent-blue-900 rounded"
+                                       class="size-5 shrink-0 accent-blue-900 rounded cursor-pointer
+                                              focus-visible:ring-2 focus-visible:ring-blue-900
+                                              focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                                        @checked(request('pool'))>
                                 <span class="text-slate-800 text-sm">Swimming Pool</span>
                             </label>
-                            <label class="flex items-center gap-3 min-h-[44px] cursor-pointer">
+                            <label class="flex items-center gap-3 min-h-[44px] px-2 rounded-md cursor-pointer hover:bg-slate-100 transition-colors">
                                 <input type="checkbox" name="spa" value="1"
-                                       class="size-4 accent-blue-900 rounded"
+                                       class="size-5 shrink-0 accent-blue-900 rounded cursor-pointer
+                                              focus-visible:ring-2 focus-visible:ring-blue-900
+                                              focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                                        @checked(request('spa'))>
                                 <span class="text-slate-800 text-sm">Spa &amp; Wellness</span>
                             </label>
-                            <label class="flex items-center gap-3 min-h-[44px] cursor-pointer">
+                            <label class="flex items-center gap-3 min-h-[44px] px-2 rounded-md cursor-pointer hover:bg-slate-100 transition-colors">
                                 <input type="checkbox" name="breakfast" value="1"
-                                       class="size-4 accent-blue-900 rounded"
+                                       class="size-5 shrink-0 accent-blue-900 rounded cursor-pointer
+                                              focus-visible:ring-2 focus-visible:ring-blue-900
+                                              focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                                        @checked(request('breakfast'))>
                                 <span class="text-slate-800 text-sm">Breakfast Included</span>
                             </label>
                         </div>
                     </fieldset>
 
-                    {{-- Star Rating --}}
+                    {{--
+                        STAR RATING — why buttons instead of <input type="radio">:
+                        Native radio inputs sharing the same name="" are grouped by the
+                        browser into a single Tab stop (roving-tabindex). Only the
+                        checked radio enters the Tab sequence; the rest need arrow keys.
+                        Using <button role="radio"> gives every option its own Tab stop
+                        while keeping the correct ARIA semantics for screen readers.
+                        A hidden <input> carries the selected value on form submit.
+                    --}}
                     <fieldset class="mb-6">
                         <legend class="text-sm font-semibold text-slate-800 mb-3">Star Rating</legend>
-                        <div class="space-y-1">
-                            <label class="flex items-center gap-3 min-h-[44px] cursor-pointer">
-                                <input type="radio" name="stars" value=""
-                                       class="size-4 accent-blue-900"
-                                       @checked(!request('stars'))>
-                                <span class="text-slate-800 text-sm">Any rating</span>
-                            </label>
+                        <input type="hidden" name="stars" id="stars-hidden" value="{{ request('stars', '') }}">
+                        @php $cur = request('stars', ''); @endphp
+                        {{-- role="radiogroup" tells screen readers (JAWS/NVDA/VoiceOver)
+                             to announce position: "Any star rating, radio button, 1 of 4".
+                             Without it they skip the count even with role="radio" on buttons. --}}
+                        <div role="radiogroup" aria-label="Star Rating" class="space-y-1">
+
+                            {{-- "Any rating" --}}
+                            <button type="button"
+                                    role="radio"
+                                    aria-checked="{{ $cur === '' ? 'true' : 'false' }}"
+                                    aria-label="Any star rating"
+                                    data-stars=""
+                                    class="star-opt flex items-center gap-3 w-full min-h-[44px] px-2 rounded-md text-left
+                                           hover:bg-slate-100 transition-colors
+                                           {{ $cur === '' ? 'bg-blue-50 font-semibold text-slate-900' : 'text-slate-800' }}">
+                                <span aria-hidden="true"
+                                      class="star-circle size-5 shrink-0 rounded-full border-2 bg-white flex items-center justify-center">
+                                </span>
+                                <span aria-hidden="true" class="text-sm">Any rating</span>
+                            </button>
+
                             @foreach([5, 4, 3] as $star)
-                            <label class="flex items-center gap-3 min-h-[44px] cursor-pointer">
-                                <input type="radio" name="stars" value="{{ $star }}"
-                                       class="size-4 accent-blue-900"
-                                       @checked(request('stars') == $star)>
-                                <span class="flex items-center gap-1 text-sm text-slate-800">
+                            <button type="button"
+                                    role="radio"
+                                    aria-checked="{{ $cur == $star ? 'true' : 'false' }}"
+                                    aria-label="{{ $star }} stars"
+                                    data-stars="{{ $star }}"
+                                    class="star-opt flex items-center gap-3 w-full min-h-[44px] px-2 rounded-md text-left
+                                           hover:bg-slate-100 transition-colors
+                                           {{ $cur == $star ? 'bg-blue-50 font-semibold text-slate-900' : 'text-slate-800' }}">
+                                <span aria-hidden="true"
+                                      class="star-circle size-5 shrink-0 rounded-full border-2 bg-white flex items-center justify-center">
+                                </span>
+                                <span aria-hidden="true" class="flex items-center gap-1 text-sm">
                                     {{ $star }}
                                     <x-star-rating :rating="$star" size="sm" />
                                 </span>
-                            </label>
+                            </button>
                             @endforeach
+
                         </div>
                     </fieldset>
+                    <style>
+                    /* Remove browser default focus ring from the button row */
+                    .star-opt:focus-visible {
+                        outline: none;
+                        box-shadow: none;
+                    }
+                    /* Focus ring on the circle only (WCAG 2.4.12 AAA) */
+                    .star-opt:focus-visible .star-circle {
+                        box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #1e3a8a;
+                    }
+                    /* Selected state: blue border + blue dot via ::after */
+                    .star-opt[aria-checked="true"] .star-circle {
+                        border-color: #1e3a8a;
+                    }
+                    .star-opt[aria-checked="true"] .star-circle::after {
+                        content: '';
+                        display: block;
+                        width: 0.625rem;
+                        height: 0.625rem;
+                        border-radius: 9999px;
+                        background-color: #1e3a8a;
+                    }
+                    /* Unselected state: grey border, no dot */
+                    .star-opt[aria-checked="false"] .star-circle {
+                        border-color: #64748b;
+                    }
+                    </style>
+                    <script>
+                    /* Star rating: each button is individually Tab-focusable (role="radio").
+                       Arrow keys also work for AT users who expect radiogroup navigation. */
+                    (function () {
+                        var hidden  = document.getElementById('stars-hidden');
+                        var btns    = Array.from(document.querySelectorAll('.star-opt'));
+
+                        function activate(btn) {
+                            hidden.value = btn.dataset.stars;
+                            btns.forEach(function (b) {
+                                var on = (b === btn);
+                                b.setAttribute('aria-checked', on ? 'true' : 'false');
+                                b.classList.toggle('bg-blue-50',     on);
+                                b.classList.toggle('font-semibold',  on);
+                                b.classList.toggle('text-slate-900', on);
+                                b.classList.toggle('text-slate-800', !on);
+                            });
+                        }
+
+                        btns.forEach(function (btn) {
+                            btn.addEventListener('click', function () { activate(btn); });
+                            btn.addEventListener('keydown', function (e) {
+                                var i = btns.indexOf(btn);
+                                if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+                                    e.preventDefault(); btns[(i + 1) % btns.length].focus();
+                                } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+                                    e.preventDefault(); btns[(i - 1 + btns.length) % btns.length].focus();
+                                }
+                            });
+                        });
+                    }());
+                    </script>
 
                     {{-- Max price --}}
                     <div class="mb-6">
@@ -158,9 +252,7 @@
             </div>
         </aside>
 
-        {{-- ====================================================
-             HOTEL RESULTS GRID
-             ==================================================== --}}
+        {{-- HOTEL RESULTS GRID --}}
         <div class="flex-1 min-w-0">
 
             <p class="text-slate-700 text-sm mb-6" aria-live="polite" aria-atomic="true">
@@ -192,7 +284,7 @@
 
                 @if($hotels->hasPages())
                 <nav class="mt-8" aria-label="Search results pages">
-                    {{ $hotels->links('pagination::tailwind') }}
+                    {{ $hotels->links('pagination.pagCustom') }}
                 </nav>
                 @endif
 

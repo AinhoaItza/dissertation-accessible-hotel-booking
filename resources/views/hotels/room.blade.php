@@ -25,7 +25,7 @@
 
     <div class="mb-8">
         <h1 class="text-3xl font-bold text-slate-900">{{ $room->name }}</h1>
-        <p class="text-slate-700 mt-1">{{ $hotel->name }} &mdash; {{ $hotel->area }}, {{ $hotel->city }}</p>
+        <p class="text-slate-700 mt-1">{{ $hotel->name }} — {{ $hotel->area }}, {{ $hotel->city }}</p>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
@@ -103,7 +103,7 @@
                             <input type="text" id="first_name" name="first_name"
                                    autocomplete="given-name" required aria-required="true"
                                    class="h-11 px-3 border-2 border-slate-300 rounded text-slate-900 text-sm
-                                          hover:border-slate-500 transition-colors"
+                                          hover:border-slate-500 focus:ring-2 focus:ring-blue-900 focus:ring-offset-2 transition-colors"
                                    placeholder="e.g. Jane">
                         </div>
                         <div class="flex flex-col gap-1.5">
@@ -113,7 +113,7 @@
                             <input type="text" id="last_name" name="last_name"
                                    autocomplete="family-name" required aria-required="true"
                                    class="h-11 px-3 border-2 border-slate-300 rounded text-slate-900 text-sm
-                                          hover:border-slate-500 transition-colors"
+                                          hover:border-slate-500 focus:ring-2 focus:ring-blue-900 focus:ring-offset-2 transition-colors"
                                    placeholder="e.g. Smith">
                         </div>
                     </div>
@@ -126,7 +126,7 @@
                                autocomplete="email" required aria-required="true"
                                aria-describedby="email-hint"
                                class="h-11 px-3 border-2 border-slate-300 rounded text-slate-900 text-sm
-                                      hover:border-slate-500 transition-colors"
+                                      hover:border-slate-500 focus:ring-2 focus:ring-blue-900 focus:ring-offset-2 transition-colors"
                                placeholder="e.g. jane.smith@example.com">
                         <p id="email-hint" class="text-xs text-slate-700">
                             Your booking confirmation will be sent to this address.
@@ -140,7 +140,7 @@
                         <input type="tel" id="phone" name="phone"
                                autocomplete="tel" required aria-required="true"
                                class="h-11 px-3 border-2 border-slate-300 rounded text-slate-900 text-sm
-                                      hover:border-slate-500 transition-colors"
+                                      hover:border-slate-500 focus:ring-2 focus:ring-blue-900 focus:ring-offset-2 transition-colors"
                                placeholder="e.g. +44 7700 900000">
                     </div>
 
@@ -151,7 +151,7 @@
                         <textarea id="requests" name="requests" rows="4"
                                   aria-describedby="requests-hint"
                                   class="px-3 py-3 border-2 border-slate-300 rounded text-slate-900 text-sm
-                                         hover:border-slate-500 transition-colors resize-y"
+                                         hover:border-slate-500 focus:ring-2 focus:ring-blue-900 focus:ring-offset-2 transition-colors resize-y"
                                   placeholder="e.g. early check-in, ground floor room, allergy information…"></textarea>
                         <p id="requests-hint" class="text-xs text-slate-700">
                             We will do our best to accommodate requests, but cannot guarantee them.
@@ -166,10 +166,9 @@
                         </p>
                     </div>
 
-                    {{-- WCAG 2.5.5: min-h-[44px]  |  WCAG 1.4.6: white on blue-900 = 8.9:1 ✓ AAA --}}
                     <button type="submit"
                             class="w-full min-h-[44px] bg-blue-900 hover:bg-blue-800 text-white
-                                   font-bold text-base rounded transition-colors">
+                                   font-bold text-base rounded focus:ring-2 focus:ring-blue-900 focus:ring-offset-2 transition-colors">
                         Confirm Reservation
                     </button>
                 </form>
@@ -229,7 +228,7 @@
                         </div>
                         <div class="flex justify-between">
                             <span class="text-slate-700">
-                                £{{ number_format($pricePerNight, 2) }} &times; {{ $nights }} {{ Str::plural('night', $nights) }}
+                                £{{ number_format($pricePerNight, 2) }} × {{ $nights }} {{ Str::plural('night', $nights) }}
                             </span>
                             <span class="text-slate-900 font-medium">£{{ number_format($subtotal, 2) }}</span>
                         </div>

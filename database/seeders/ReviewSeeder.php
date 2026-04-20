@@ -12,13 +12,25 @@ class ReviewSeeder extends Seeder
         // Keyed by hotel slug — 4–6 reviews each
         $reviews = [
 
+            // ── 4-STAR ──────────────────────────────────────────────────
+
             'the-langham-london' => [
-                ['author' => 'James Thornton',    'rating' => 10, 'comment' => 'The Palm Court afternoon tea alone is worth the trip. Service is impeccable — staff remember your name from the moment you arrive. The Chuan Spa left me completely restored.'],
-                ['author' => 'Yuki Tanaka',        'rating' => 9,  'comment' => 'We visited from Tokyo and the Langham exceeded even our expectations. The rooms are enormous by London standards, and the marble bathrooms are a genuine luxury.'],
-                ['author' => 'Sarah Mitchell',     'rating' => 10, 'comment' => 'Celebrated our 25th anniversary here. The team had arranged flowers, champagne, and a handwritten note in the room. Attention to detail is unmatched in London.'],
-                ['author' => 'Pierre Dubois',      'rating' => 8,  'comment' => 'Excellent location for exploring Marylebone and Regent\'s Park. The Roux at The Landau is exceptional — the sommelier\'s Burgundy selection particularly impressive.'],
-                ['author' => 'Amanda Foster',      'rating' => 9,  'comment' => 'Stayed in a Superior King and the bed was simply the most comfortable I have ever slept in. Breakfast was a real event, not just a meal. Will return without question.'],
+                ['author' => 'James Thornton',    'rating' => 8, 'comment' => 'Solid four-star hotel in a great Marylebone location. The rooms are spacious by London standards and the Chuan Spa is a genuine highlight. The Palm Court afternoon tea was enjoyable. Good value for the area.'],
+                ['author' => 'Yuki Tanaka',        'rating' => 7, 'comment' => 'Comfortable stay overall. The room was clean and well-maintained and the bed was very good. Service was friendly but inconsistent — some staff were excellent, others indifferent. Breakfast was decent but not exceptional.'],
+                ['author' => 'Sarah Mitchell',     'rating' => 9, 'comment' => 'Stayed for our anniversary and the team made a real effort with a small arrangement in the room. The spa treatments were excellent value. Location is perfect for the West End and Regent\'s Park. Would return.'],
+                ['author' => 'Pierre Dubois',      'rating' => 6, 'comment' => 'The location is excellent and the room comfortable, but at this price point I expected a little more attention to detail. The restaurant was fine but not memorable, and the bar was quite noisy at weekends.'],
+                ['author' => 'Amanda Foster',      'rating' => 8, 'comment' => 'Good standard hotel with a pleasant spa. The Palm Court is a nice place for afternoon tea — not quite as ceremonial as the grand hotels but very enjoyable. Would happily return for the location and spa.'],
             ],
+
+            'the-waldorf' => [
+                ['author' => 'Catherine Brooke',   'rating' => 6, 'comment' => 'Decent location on the Strand and a clean room, but nothing special. The bathroom was small and the shower pressure was weak. Breakfast was a standard buffet with limited options. Fine for the price.'],
+                ['author' => 'Stefan Nowak',        'rating' => 5, 'comment' => 'The room was tired — worn carpet and a dated bathroom. Corridor noise was noticeable at night. The location near Covent Garden is the main draw. There are better options nearby for a similar price.'],
+                ['author' => 'Harriet Quinn',       'rating' => 7, 'comment' => 'Perfectly adequate for a short London visit. I was there for a theatre trip and the location was ideal. The room was basic but clean, the staff were helpful, and the bar served a reasonable drink. Exactly what I expected.'],
+                ['author' => 'David Nakamura',      'rating' => 5, 'comment' => 'Average in every respect. The WiFi was slow, housekeeping was inconsistent, and the mattress had seen better days. For the Strand location it offers reasonable value but do not expect anything beyond the basics.'],
+                ['author' => 'Emma-Louise Fraser',  'rating' => 4, 'comment' => 'Disappointing. The room was small and poorly soundproofed — I could hear the guests next door clearly throughout both nights. The front desk were pleasant but unable to resolve the noise. Would not return.'],
+            ],
+
+            // ── 5-STAR ──────────────────────────────────────────────────
 
             'hotel-de-crillon' => [
                 ['author' => 'Marie-Claire Fontaine', 'rating' => 10, 'comment' => 'As a Parisian, I had high standards for the Crillon\'s reopening. It surpassed all of them. The Lagerfeld-designed rooms are a work of art and the spa is the finest in the city.'],
@@ -78,29 +90,27 @@ class ReviewSeeder extends Seeder
                 ['author' => 'Yoko Inoue',          'rating' => 5,  'comment' => 'The rooms are beautiful but noise from 57th Street was significant on a lower floor. Asked to move and was told no rooms were available. For the price, a quieter room should be guaranteed.'],
             ],
 
+            // ── 4-STAR ──────────────────────────────────────────────────
+
             'the-carlyle' => [
-                ['author' => 'Edward Cavendish',    'rating' => 10, 'comment' => 'The Carlyle has no equal for discreet, residential luxury in New York. Bemelmans Bar on a winter evening — with a martini and the Madeline murals — is one of life\'s genuine pleasures.'],
-                ['author' => 'Grace Sullivan',      'rating' => 9,  'comment' => 'Café Carlyle is a living piece of New York cultural history. We caught a late show and the intimacy of the room makes the performance extraordinary. The rooms are impeccably maintained.'],
-                ['author' => 'Marcus Webb',         'rating' => 6,  'comment' => 'The location on the Upper East Side is wonderful but it means cabs everywhere. The rooms, while beautiful, are smaller than competitors at this price point. The art deco charm is real but some areas feel tired.'],
-                ['author' => 'Fiona Blackwood',     'rating' => 10, 'comment' => 'Stayed here every year for a decade and it never disappoints. The staff know their long-stay guests genuinely — not just from a file. That kind of institutional warmth is almost impossible to manufacture.'],
-                ['author' => 'Neil Patterson',      'rating' => 5,  'comment' => 'Overrated at current prices. The rooms are pleasant but unremarkable for the rate, and the restaurant is outclassed by a dozen places within walking distance. The bar is the only truly special element.'],
+                ['author' => 'Edward Cavendish',    'rating' => 8, 'comment' => 'Bemelmans Bar alone is worth a visit to The Carlyle. The art deco interiors are genuinely well-preserved and the Upper East Side location is excellent for the Met and Central Park. A classy four-star with real character.'],
+                ['author' => 'Grace Sullivan',      'rating' => 9, 'comment' => 'Café Carlyle hosts intimate cabaret performances that are hard to find elsewhere in New York. The rooms are comfortable and the neighbourhood is wonderfully quiet by Manhattan standards. A refined and enjoyable stay.'],
+                ['author' => 'Marcus Webb',         'rating' => 7, 'comment' => 'Good hotel in a great area. The rooms are a decent size and well-maintained. The art deco style is genuinely appealing. Getting to Midtown requires a cab or subway but the trade-off for the Upper East Side calm is worth it.'],
+                ['author' => 'Fiona Blackwood',     'rating' => 8, 'comment' => 'The Carlyle is a reliable and elegant four-star. Bemelmans Bar is a genuine New York institution. The staff are professional and the rooms are comfortable. Not the flashiest hotel in Manhattan but one of the most characterful.'],
+                ['author' => 'Neil Patterson',      'rating' => 6, 'comment' => 'Decent hotel but the standard rooms are a bit small for the price point. The bar is exceptional but the restaurant is merely average — better to eat elsewhere in the neighbourhood. Good choice if Bemelmans is the draw.'],
             ],
 
             'baccarat-hotel-new-york' => [
-                ['author' => 'Isabelle Fontaine',   'rating' => 10, 'comment' => 'The most visually stunning hotel I have ever stayed in. Every surface glitters. The Grand Salon at night — with the 9,000-crystal chandelier reflected in every surface — is genuinely theatrical.'],
-                ['author' => 'Ryan Kowalski',       'rating' => 8,  'comment' => 'The Spa de La Mer is the highlight. Four hours of treatment in the most beautiful spa environment I have encountered. The pool is extraordinary. The rooms live up to the public spaces.'],
-                ['author' => 'Diane Marchetti',     'rating' => 4,  'comment' => 'The design is dazzling but it overwhelms any sense of comfort or intimacy. The hotel feels more like a showroom than a place to relax. The price is unjustifiable when comparable service is available elsewhere.'],
-                ['author' => 'Oliver Chen',         'rating' => 9,  'comment' => 'Opposite MoMA and perfectly positioned for Midtown. The Chevalier restaurant is genuinely exceptional — the tasting menu is one of the best in New York. Crystal Room is exactly as opulent as it sounds.'],
-                ['author' => 'Priya Anand',         'rating' => 6,  'comment' => 'Stunning aesthetics but some service inconsistencies on our stay. The butler service was attentive one day and nearly absent the next. For this rate, consistency should be guaranteed, not aspirational.'],
+                ['author' => 'Isabelle Fontaine',   'rating' => 6, 'comment' => 'Central Midtown location opposite MoMA and a clean, comfortable room. The Grand Salon bar is a pleasant common area. Good value for a standard three-star in this part of Manhattan.'],
+                ['author' => 'Ryan Kowalski',       'rating' => 7, 'comment' => 'Decent mid-range hotel in a great Midtown position. The fitness centre is well-equipped and the room was clean with a comfortable bed. WiFi was reliable. Nothing spectacular but delivered what was needed for a business trip.'],
+                ['author' => 'Diane Marchetti',     'rating' => 5, 'comment' => 'The room was smaller than the photos suggested and the air conditioning was noisy at night. The front desk staff were helpful but the overall experience was unremarkable. MoMA across the road is the real reason to stay here.'],
+                ['author' => 'Oliver Chen',         'rating' => 6, 'comment' => 'Good location for Midtown and the MoMA. Rooms are functional rather than luxurious. The bar downstairs is a nice touch. The breakfast buffet was adequate. A reliable if unexciting Midtown option.'],
+                ['author' => 'Priya Anand',         'rating' => 4, 'comment' => 'The room had a maintenance issue — a flickering light and a loose door handle — that took two requests to resolve. The location is genuinely convenient but the standard of upkeep was below what I expected even for three stars.'],
             ],
 
-            'the-waldorf' => [
-                ['author' => 'Catherine Brooke',    'rating' => 10, 'comment' => 'The Savoy invented the modern luxury hotel and it still defines the genre. The Thames Foyer afternoon tea is the finest in London — the pianist, the winter garden, the scones. Genuinely unmatched.'],
-                ['author' => 'Stefan Nowak',        'rating' => 9,  'comment' => 'The River Suite with the Thames panorama is extraordinary value relative to other London river-view properties. The American Bar is a cultural institution — the oldest cocktail bar in Europe.'],
-                ['author' => 'Harriet Quinn',       'rating' => 5,  'comment' => 'The historic areas are wonderful but our room overlooked a service courtyard rather than the Thames despite requesting a river view. The booking team were apologetic but offered no meaningful resolution.'],
-                ['author' => 'David Nakamura',      'rating' => 8,  'comment' => 'Stayed for three nights on a business visit. The concierge arranged a private tour of the City that was extraordinary. Rooms are elegant and well-maintained. Breakfast is a genuinely special occasion.'],
-                ['author' => 'Emma-Louise Fraser',  'rating' => 4,  'comment' => 'The renovation has made the public spaces beautiful but the standard rooms feel generic. The price is now at Claridge\'s level but the product does not match. Worth visiting for the American Bar, not for the rooms.'],
-            ],
+            'the-waldorf-astoria-new-york' => [], // placeholder — not a seeded hotel
+
+            // ── 5-STAR ──────────────────────────────────────────────────
 
             'claridges' => [
                 ['author' => 'Victoria Pemberton',  'rating' => 10, 'comment' => 'Claridge\'s is simply the finest hotel in London. Every detail is considered, every member of staff knows their role perfectly, and the art deco interiors are a genuine work of architecture. A benchmark for everything.'],
@@ -142,29 +152,33 @@ class ReviewSeeder extends Seeder
                 ['author' => 'Patricia Devlin',     'rating' => 4,  'comment' => 'Overpriced relative to the Paris competition. The rooms are large and comfortable but the service has a corporate Four Seasons efficiency that feels at odds with Paris. No warmth — just process.'],
             ],
 
+            // ── 4-STAR ──────────────────────────────────────────────────
+
             'mandarin-oriental-paris' => [
-                ['author' => 'Cécile Renard',       'rating' => 10, 'comment' => 'The spa is the finest in Paris — the indoor pool beneath the chandelier is breathtaking. The rooms on the Rue Saint-Honoré side have the most beautiful views of the Paris rooftops. Surpassed every expectation.'],
-                ['author' => 'Daniel Hartmann',     'rating' => 8,  'comment' => 'Sur Mesure by Thierry Marx holds two Michelin stars and the tasting menu is among the most creative dining experiences I have had in France. The cocktail bar is underrated and exceptional.'],
-                ['author' => 'Sofía Ramírez',       'rating' => 6,  'comment' => 'The hotel is beautiful but the breakfast was unexpectedly average for a Mandarin Oriental property. The rooms were immaculate. The spa is genuinely world-class. Mixed across the experience overall.'],
-                ['author' => 'Robert Klaassen',     'rating' => 9,  'comment' => 'Prime location on the Rue Saint-Honoré makes shopping effortless. The rooms are among the most thoughtfully designed in Paris — the attention to detail in the materials and lighting is extraordinary.'],
-                ['author' => 'Fiona Ashby',         'rating' => 4,  'comment' => 'The exterior and lobby promise more than the rooms deliver. Our deluxe room was modest in size and the bathroom layout was awkward. The Mandarin Oriental brand commands a premium the Paris property does not fully earn.'],
+                ['author' => 'Cécile Renard',       'rating' => 8, 'comment' => 'Good four-star hotel in a superb location on the Rue Saint-Honoré. The spa is genuinely impressive and the rooms are elegantly designed. Breakfast was well above average. A solid choice for central Paris.'],
+                ['author' => 'Daniel Hartmann',     'rating' => 7, 'comment' => 'The location is excellent for shopping and the Tuileries. Rooms are well-designed and comfortable. The bar is pleasant. Service was friendly but occasionally slow at check-in. Good value for this part of Paris.'],
+                ['author' => 'Sofía Ramírez',       'rating' => 9, 'comment' => 'The spa was the highlight of our Paris trip — excellent treatments in a beautiful setting. The room overlooking the rooftops was lovely. Breakfast was a cut above most four-star hotels. Would return.'],
+                ['author' => 'Robert Klaassen',     'rating' => 6, 'comment' => 'Comfortable and well located but the restaurant was expensive for what was offered. Service in the dining room was slow on our first morning. The rooms are a good size for Paris. A reasonable mid-range option.'],
+                ['author' => 'Fiona Ashby',         'rating' => 7, 'comment' => 'The lobby and bar area are very attractive. Rooms are on the smaller side for a four-star. The concierge was helpful with restaurant recommendations. A reliable hotel without being exceptional in any particular way.'],
             ],
 
             'le-meurice' => [
-                ['author' => 'Henri Beaumont',      'rating' => 10, 'comment' => 'Le Meurice is the most elegant hotel in Paris. The Salon Proust for afternoon tea, Alain Ducasse\'s three-Michelin-star restaurant, the Tuileries view — all are irreplaceable. The definition of Parisian grandeur.'],
-                ['author' => 'Susan Crawford',      'rating' => 9,  'comment' => 'The Belle Étoile terrace suite is the most spectacular room in Paris. The private terrace with 360-degree views from Montmartre to the Eiffel Tower at sunset is something no photograph can capture adequately.'],
-                ['author' => 'Tomáš Novák',         'rating' => 5,  'comment' => 'The restaurant and lobby are exceptional but our standard room had a partial view of a neighbouring building rather than the Tuileries. Feels like the hotel allocates its best rooms by spend history rather than booking.'],
-                ['author' => 'Akira Matsumoto',     'rating' => 10, 'comment' => 'Stayed for five nights and never wanted to leave. The bar, the spa, the restaurant — every element performs at the same extraordinary level. The Tuileries view from the breakfast room is unmatched in Paris.'],
-                ['author' => 'Laura Bentley',       'rating' => 6,  'comment' => 'The public spaces are breathtaking but the standard rooms are dated compared to the Bristol and Crillon at similar prices. The Ducasse restaurant is genuinely transcendent. The rooms need the investment the public spaces have received.'],
+                ['author' => 'Henri Beaumont',      'rating' => 6, 'comment' => 'Good location near the Tuileries and Louvre. The room was compact but clean. The front desk staff spoke good English and were helpful with recommendations. Breakfast was a basic continental — fine but nothing special.'],
+                ['author' => 'Susan Crawford',      'rating' => 5, 'comment' => 'The room was small and the bathroom dated. The shower had inconsistent temperature. Location is the main selling point — everything in central Paris is walkable. Not much else to recommend it.'],
+                ['author' => 'Tomáš Novák',         'rating' => 7, 'comment' => 'Solid budget choice for Paris. The room was functional and clean, the bed comfortable enough for three nights, and the neighbourhood is wonderful. If you just need a base for exploring Paris without spending a fortune, it delivers.'],
+                ['author' => 'Akira Matsumoto',     'rating' => 4, 'comment' => 'The room was acceptable but the noise from the Rue de Rivoli was significant — the windows provide very little sound insulation. Ear plugs were provided, which says it all. For a quiet stay, look elsewhere in Paris.'],
+                ['author' => 'Laura Bentley',       'rating' => 6, 'comment' => 'Adequate for the price. The check-in process was slow and the room smelled slightly damp on arrival, improving after we opened the window. The Tuileries Garden is across the road — the real appeal of this hotel.'],
             ],
 
             'w-barcelona' => [
-                ['author' => 'Marta Puig',          'rating' => 9,  'comment' => 'The W is the most dramatic hotel building in Barcelona. The Bravo beach club is the best way to spend a Barcelona afternoon. Watching the sunset over the Mediterranean from the WET pool is something I will never forget.'],
-                ['author' => 'Connor Bradley',      'rating' => 8,  'comment' => 'The Extreme WOW suite is an experience in itself — a private pool and terrace at the tip of the Barcelona waterfront. The party atmosphere in the hotel suits some guests better than others but we loved it.'],
-                ['author' => 'Silvia Moreno',       'rating' => 4,  'comment' => 'Too noisy for a relaxing stay. The bar and club music was audible in our room until 3am on both nights. Complained twice and the front desk were sympathetic but powerless. Not appropriate if you want to sleep.'],
-                ['author' => 'Ben Whitaker',        'rating' => 8,  'comment' => 'The best hotel pool area in Barcelona by a significant margin. The Wave restaurant has excellent seafood and the location at the end of Barceloneta is unique. Worth the premium if you want beach and city together.'],
-                ['author' => 'Kristína Horáčková',  'rating' => 5,  'comment' => 'The design is extraordinary but the service did not match the visual ambition. Staff were friendly but often uninformed about the hotel\'s own facilities. The rooms felt smaller than the photos suggest.'],
+                ['author' => 'Marta Puig',          'rating' => 8, 'comment' => 'The W is a great four-star beach hotel. The location at the tip of Barceloneta is unique, the pool area is excellent in summer, and the Wave restaurant has good seafood. A lively and enjoyable stay.'],
+                ['author' => 'Connor Bradley',      'rating' => 9, 'comment' => 'Loved the W for a summer beach stay. The sail building is genuinely striking and the sea views from our room were beautiful at sunset. The beach access is the best of any Barcelona hotel. Great atmosphere.'],
+                ['author' => 'Silvia Moreno',       'rating' => 5, 'comment' => 'The bar noise was audible in our room late into the night. Good for guests who want to be in the middle of the party atmosphere, but if you need to sleep before midnight this is not the right hotel.'],
+                ['author' => 'Ben Whitaker',        'rating' => 7, 'comment' => 'Good mid-range option for a beach-focused Barcelona stay. The pool area is well-designed and the location for Barceloneta is hard to beat. Service was friendly. A few small maintenance issues in the room but nothing serious.'],
+                ['author' => 'Kristína Horáčková',  'rating' => 6, 'comment' => 'The rooms are a bit smaller than expected from the photos. The design is eye-catching but some elements feel dated. The beach access is the real highlight. Suits guests prioritising outdoor activities over room comfort.'],
             ],
+
+            // ── 5-STAR ──────────────────────────────────────────────────
 
             'mandarin-oriental-barcelona' => [
                 ['author' => 'Jordi Esteve',        'rating' => 10, 'comment' => 'The best hotel on the Passeig de Gràcia without question. Moments is the finest restaurant in Barcelona — Carme Ruscalleda\'s cooking is extraordinary. The terrace pool overlooking the Modernista facades is unforgettable.'],
@@ -174,13 +188,17 @@ class ReviewSeeder extends Seeder
                 ['author' => 'Andrew Fitch',        'rating' => 6,  'comment' => 'Great location and beautiful lobby but the room allocated was noisy due to a ventilation shaft. Moved after one night to a better room. The second room was excellent. Initial allocation below standard.'],
             ],
 
+            // ── 3-STAR ──────────────────────────────────────────────────
+
             'hotel-casa-fuster' => [
-                ['author' => 'Isabel Comas',        'rating' => 7,  'comment' => 'Great value for the Passeig de Gràcia location. The room was small but clean, and the Café Vienès downstairs is a real bonus — jazz on Thursday nights is lovely. Do not expect luxury but it is a solid choice.'],
-                ['author' => 'Michael Hennessy',    'rating' => 6,  'comment' => 'The building is stunning but the rooms do not live up to the facade. Thin walls, dated bathroom, and slow breakfast service. The rooftop pool is small and busy in summer. Good location, average experience.'],
-                ['author' => 'Àngels Puigdomènech', 'rating' => 4,  'comment' => 'Very disappointed. The room smelled musty and the air conditioning was noisy all night. Staff were friendly but unable to resolve the issues. For this area of Barcelona there are better options at the same price.'],
-                ['author' => 'Thomas Becker',       'rating' => 7,  'comment' => 'Decent budget stay in a remarkable building. The corridors and public areas are genuinely beautiful. Rooms are basic but clean. WiFi was slow. Would stay again for the location and price, not for the comfort.'],
-                ['author' => 'Claire Fontaine',     'rating' => 5,  'comment' => 'The Modernista architecture sells the hotel but the product is decidedly three-star. Breakfast was a buffet with limited options, housekeeping was inconsistent, and the mattress in our room was overdue for replacement.'],
+                ['author' => 'Isabel Comas',        'rating' => 7, 'comment' => 'Great value for the Passeig de Gràcia location. The room was small but clean, and the Café Vienès downstairs is a real bonus — jazz on Thursday nights is lovely. Do not expect luxury but it is a solid choice.'],
+                ['author' => 'Michael Hennessy',    'rating' => 6, 'comment' => 'The building is stunning but the rooms do not live up to the facade. Thin walls, dated bathroom, and slow breakfast service. The rooftop pool is small and busy in summer. Good location, average experience.'],
+                ['author' => 'Àngels Puigdomènech', 'rating' => 4, 'comment' => 'Very disappointed. The room smelled musty and the air conditioning was noisy all night. Staff were friendly but unable to resolve the issues. For this area of Barcelona there are better options at the same price.'],
+                ['author' => 'Thomas Becker',       'rating' => 7, 'comment' => 'Decent budget stay in a remarkable building. The corridors and public areas are genuinely beautiful. Rooms are basic but clean. WiFi was slow. Would stay again for the location and price, not for the comfort.'],
+                ['author' => 'Claire Fontaine',     'rating' => 5, 'comment' => 'The Modernista architecture sells the hotel but the product is decidedly three-star. Breakfast was a buffet with limited options, housekeeping was inconsistent, and the mattress in our room was overdue for replacement.'],
             ],
+
+            // ── 5-STAR ──────────────────────────────────────────────────
 
             'el-palace-barcelona' => [
                 ['author' => 'Rosa Vilaró',         'rating' => 10, 'comment' => 'El Palace has been a Barcelona institution for over a century and it earns its reputation every day. The rooftop pool with Eixample views is the finest in the city. La Dolce Vita is excellent.'],
@@ -198,21 +216,27 @@ class ReviewSeeder extends Seeder
                 ['author' => 'Giuliana Ferrara',    'rating' => 4,  'comment' => 'The hotel has extraordinary facilities but the food in the pool restaurant was overpriced and mediocre. The main pool area was overcrowded on our two visits. La Pergola is exceptional; the rest of the food offer is not.'],
             ],
 
+            // ── 4-STAR ──────────────────────────────────────────────────
+
             'hotel-eden-rome' => [
-                ['author' => 'Sofia Gentile',       'rating' => 10, 'comment' => 'Il Giardino rooftop is the most beautiful restaurant view in Rome. The kitchen matches the setting — the pasta and seafood are genuinely excellent. The rooms are among the most intimate in Rome\'s luxury tier.'],
-                ['author' => 'Charles Whitmore',    'rating' => 9,  'comment' => 'The Eden\'s scale — small, intimate, personal — is its great advantage. Every member of staff knows your name and preferences. The Pincian Hill location is perfect: quiet, central, and green.'],
-                ['author' => 'Valentina Esposito',  'rating' => 6,  'comment' => 'The rooftop is extraordinary but our room was on the second floor with a limited view. The price does not differentiate enough between rooms — paying Eden rates for a partial airshaft view is disappointing.'],
-                ['author' => 'James Forsythe',      'rating' => 10, 'comment' => 'Stayed at the Eden for ten years when visiting Rome. The consistency across a decade is remarkable. The same warmth, the same standard, the same genuine pleasure in every stay. Audrey Hepburn was right about the view.'],
-                ['author' => 'Nadine Richter',      'rating' => 5,  'comment' => 'Lovely hotel in a wonderful location but the bathroom in our deluxe room was genuinely small — barely room to turn around. For a Dorchester Collection property at these rates, the room sizing needs addressing.'],
+                ['author' => 'Sofia Gentile',       'rating' => 8, 'comment' => 'Good four-star hotel with a lovely rooftop terrace. The views over Rome from the bar upstairs are worth the visit alone. Rooms are comfortable and well-maintained. Breakfast is solid. A reliable Roman address.'],
+                ['author' => 'Charles Whitmore',    'rating' => 9, 'comment' => 'The Eden is a good hotel at a reasonable price for the Pincian Hill location. The staff are friendly and attentive, the rooms are quiet and well furnished, and the rooftop is a lovely place to end the day with a drink.'],
+                ['author' => 'Valentina Esposito',  'rating' => 7, 'comment' => 'Comfortable stay in a well-located hotel. The breakfast was well-stocked and service at the table was efficient. Our room was a good size. The rooftop terrace was busy but worth visiting for the Rome panorama.'],
+                ['author' => 'James Forsythe',      'rating' => 6, 'comment' => 'A decent four-star in central Rome. The room was clean but compact — not much space if you have large luggage. The restaurant was fine but not memorable. The location near the Via Veneto makes it a practical base.'],
+                ['author' => 'Nadine Richter',      'rating' => 7, 'comment' => 'Good value for central Rome. The rooftop view is genuinely impressive and the breakfast buffet is one of the better ones in this price range. A few minor maintenance issues in the bathroom but staff resolved them quickly.'],
             ],
 
+            // ── 3-STAR ──────────────────────────────────────────────────
+
             'palazzo-manfredi' => [
-                ['author' => 'Antonio Lombardi',    'rating' => 8,  'comment' => 'Unbeatable location next to the Colosseum. The room was basic but comfortable, and the rooftop terrace is a wonderful place to sit in the evening. Great value for central Rome.'],
-                ['author' => 'Catherine Eliot',     'rating' => 6,  'comment' => 'The Colosseum is literally across the road which is amazing, but the room itself was tired — peeling paint near the window and a shower with weak pressure. The location saves it.'],
-                ['author' => 'Marco Pellegrini',    'rating' => 4,  'comment' => 'No gym, no pool, limited facilities. The restaurant on-site was overpriced for the quality. The neighbourhood can be noisy at night from tour groups. Expected more for the price.'],
-                ['author' => 'Anna-Karin Lindberg', 'rating' => 7,  'comment' => 'A good three-star option if you want to be close to the Colosseum without paying five-star prices. The staff were helpful, the room was clean, and the terrace bar is a real highlight at sunset.'],
-                ['author' => 'Thomas Holt',         'rating' => 5,  'comment' => 'Mixed experience. Check-in was slow and the room we were given faced the internal courtyard, not the Colosseum. Had to ask twice to be moved. Location is genuinely excellent once you are settled.'],
+                ['author' => 'Antonio Lombardi',    'rating' => 8, 'comment' => 'Unbeatable location next to the Colosseum. The room was basic but comfortable, and the rooftop terrace is a wonderful place to sit in the evening. Great value for central Rome.'],
+                ['author' => 'Catherine Eliot',     'rating' => 6, 'comment' => 'The Colosseum is literally across the road which is amazing, but the room itself was tired — peeling paint near the window and a shower with weak pressure. The location saves it.'],
+                ['author' => 'Marco Pellegrini',    'rating' => 4, 'comment' => 'No gym, no pool, limited facilities. The restaurant on-site was overpriced for the quality. The neighbourhood can be noisy at night from tour groups. Expected more for the price.'],
+                ['author' => 'Anna-Karin Lindberg', 'rating' => 7, 'comment' => 'A good three-star option if you want to be close to the Colosseum without paying five-star prices. The staff were helpful, the room was clean, and the terrace bar is a real highlight at sunset.'],
+                ['author' => 'Thomas Holt',         'rating' => 5, 'comment' => 'Mixed experience. Check-in was slow and the room we were given faced the internal courtyard, not the Colosseum. Had to ask twice to be moved. Location is genuinely excellent once you are settled.'],
             ],
+
+            // ── 5-STAR ──────────────────────────────────────────────────
 
             'hotel-hassler-roma' => [
                 ['author' => 'Roberto Fantini',     'rating' => 10, 'comment' => 'The Hassler at the top of the Spanish Steps is Rome\'s great classic hotel. Imàgo has a Michelin star and the view from the rooftop restaurant — over all of Rome at sunset — is the finest in the city.'],
@@ -238,20 +262,24 @@ class ReviewSeeder extends Seeder
                 ['author' => 'Mark Donovan',        'rating' => 5,  'comment' => 'The price is the highest in Tokyo and the experience is extraordinary — but the location in the Otemachi financial district has no neighbourhood life. Perfect if you want silence; isolating if you want Tokyo energy.'],
             ],
 
+            // ── 4-STAR ──────────────────────────────────────────────────
+
             'the-tokyo-station-hotel' => [
-                ['author' => 'Fumiko Ishida',       'rating' => 10, 'comment' => 'Staying inside a UNESCO-listed national treasure is a genuinely unique experience. The Dome rooms with their original Taisho-era domed ceilings are extraordinary. The connection to the station makes the whole of Japan accessible.'],
-                ['author' => 'James Hartley',       'rating' => 9,  'comment' => 'The history of this building is extraordinary — completed in 1914 and hand-restored to the original specifications. The Oak Door Bar in the original dome lobby is the most atmospheric hotel bar in Japan.'],
-                ['author' => 'Yōko Nishimura',      'rating' => 5,  'comment' => 'The building is magnificent but the standard rooms overlooking the station are very noisy from the Shinkansen. Ear plugs were provided — which suggests the hotel knows the problem. Request an Imperial Palace-side room.'],
-                ['author' => 'David Pearce',        'rating' => 8,  'comment' => 'The Brasserie 1899 for breakfast is one of the best hotel breakfasts in Tokyo — the combination of Japanese and European at a very high standard. The location within the station is genuinely convenient for rail travel.'],
-                ['author' => 'Akiko Mori',          'rating' => 4,  'comment' => 'The architecture is irreplaceable but the room service was very slow on both nights and the food arrived cold once. For a hotel charging premium rates, operational consistency should match the building\'s extraordinary standard.'],
+                ['author' => 'Fumiko Ishida',       'rating' => 9, 'comment' => 'The building is extraordinary — a genuine Taisho-era national treasure. The rooms are comfortable and the connection to the station makes travel across Japan effortless. A unique four-star option with real character.'],
+                ['author' => 'James Hartley',       'rating' => 8, 'comment' => 'Great location inside the historic Tokyo Station building. The Oak Door Bar is atmospheric and the Brasserie 1899 serves a solid breakfast. Rooms are well-sized for central Tokyo. The architecture alone is worth the stay.'],
+                ['author' => 'Yōko Nishimura',      'rating' => 6, 'comment' => 'The building is magnificent but the rooms on the station side suffer from Shinkansen noise. Request an Imperial Palace-side room if possible. Once we moved, the experience improved significantly.'],
+                ['author' => 'David Pearce',        'rating' => 7, 'comment' => 'Good four-star business hotel with excellent transport links. The Brasserie 1899 breakfast was impressive. Rooms are comfortable and the in-room technology is well-designed. Reliable choice for Tokyo rail travellers.'],
+                ['author' => 'Akiko Mori',          'rating' => 7, 'comment' => 'A good mid-range hotel made special by its remarkable heritage setting. The corridors and lobby areas are genuinely atmospheric. Room service was a little slow one evening but staff were apologetic and efficient overall.'],
             ],
 
+            // ── 3-STAR ──────────────────────────────────────────────────
+
             'andaz-tokyo' => [
-                ['author' => 'Ryō Kimura',          'rating' => 7,  'comment' => 'Good value business hotel in Toranomon. Rooms are clean and modern, the WiFi is fast, and the subway access is convenient. The rooftop bar is a nice touch for a three-star property. Would stay again for work trips.'],
-                ['author' => 'Emma Hartley',        'rating' => 6,  'comment' => 'Decent mid-range hotel. The room was smaller than the photos suggested and the air conditioning was noisy. Breakfast was a basic buffet — fine but nothing special. Location is fine for business, quiet for tourism.'],
-                ['author' => 'Sven Johansson',      'rating' => 4,  'comment' => 'Below average for the price. The lift was out of service for part of our stay, housekeeping missed our room on day two, and the front desk were slow to respond to complaints. Needs better management.'],
-                ['author' => 'Natsumi Watanabe',    'rating' => 7,  'comment' => 'A solid three-star choice in central Tokyo. The Tavern restaurant serves straightforward food at fair prices. The rooms are functional and clean. Not exciting, but reliable. Good for a short business stay.'],
-                ['author' => 'Patrick Cleary',      'rating' => 5,  'comment' => 'The Toranomon area has very little going on in the evenings. The hotel itself is fine — clean rooms, friendly staff — but the neighbourhood makes it feel isolated. The subway connection saves it as a practical base.'],
+                ['author' => 'Ryō Kimura',          'rating' => 7, 'comment' => 'Good value business hotel in Toranomon. Rooms are clean and modern, the WiFi is fast, and the subway access is convenient. The rooftop bar is a nice touch for a three-star property. Would stay again for work trips.'],
+                ['author' => 'Emma Hartley',        'rating' => 6, 'comment' => 'Decent mid-range hotel. The room was smaller than the photos suggested and the air conditioning was noisy. Breakfast was a basic buffet — fine but nothing special. Location is fine for business, quiet for tourism.'],
+                ['author' => 'Sven Johansson',      'rating' => 4, 'comment' => 'Below average for the price. The lift was out of service for part of our stay, housekeeping missed our room on day two, and the front desk were slow to respond to complaints. Needs better management.'],
+                ['author' => 'Natsumi Watanabe',    'rating' => 7, 'comment' => 'A solid three-star choice in central Tokyo. The Tavern restaurant serves straightforward food at fair prices. The rooms are functional and clean. Not exciting, but reliable. Good for a short business stay.'],
+                ['author' => 'Patrick Cleary',      'rating' => 5, 'comment' => 'The Toranomon area has very little going on in the evenings. The hotel itself is fine — clean rooms, friendly staff — but the neighbourhood makes it feel isolated. The subway connection saves it as a practical base.'],
             ],
 
         ];

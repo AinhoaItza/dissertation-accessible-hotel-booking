@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\RoomController;
@@ -14,6 +15,20 @@ Route::get('/api/destinations', [HotelController::class, 'destinations'])->name(
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+// ── Auth routes (guests only) ─────────────────────────────────────────────
+Route::middleware('guest')->group(function () {
+    Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
+    Route::post('/register', [AuthController::class, 'register']);
+    Route::get('/login',    [AuthController::class, 'showLogin'])->name('login');
+    Route::post('/login',   [AuthController::class, 'login']);
+});
+
+// ── Auth routes (authenticated users only) ───────────────────────────────
+Route::middleware('auth')->group(function () {
+    Route::post('/logout',  [AuthController::class, 'logout'])->name('logout');
+    Route::get('/profile',  [AuthController::class, 'profile'])->name('profile');
+});
 
 Route::prefix('hotels')->name('hotels.')->group(function () {
     // Search results / hotel listing

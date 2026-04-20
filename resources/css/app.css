@@ -54,6 +54,16 @@
 }
 
 /*
+ * Restores the blue focus ring for elements placed on a light/white background
+ * that is itself inside a .on-dark container (e.g. the nav dropdown).
+ * The compound selector wins specificity over .on-dark :focus-visible.
+ */
+.off-dark :focus-visible,
+.on-dark .off-dark :focus-visible {
+    outline-color: #1e3a8a;
+}
+
+/*
  * Date-picker calendar icon visibility on dark backgrounds.
  */
 input[type="date"].dark-input {

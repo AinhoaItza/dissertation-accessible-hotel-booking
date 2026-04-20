@@ -180,7 +180,7 @@
             <div class="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden sticky top-4">
 
                 <div class="aspect-video bg-slate-200">
-                    <img src="{{ $room->image_path }}" alt="" aria-hidden="true"
+                    <img src="{{ $hotel->city_image_path }}" alt="" aria-hidden="true"
                          class="w-full h-full object-cover" loading="lazy" width="600" height="338">
                 </div>
 

@@ -1,6 +1,5 @@
 *.log
 .DS_Store
-.agents/
 skills-lock.json
 .env
 .env.backup

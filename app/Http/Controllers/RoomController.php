@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Booking;
 use App\Models\Hotel;
 use App\Models\Room;
 use Carbon\Carbon;
@@ -62,23 +63,45 @@ class RoomController extends Controller
 
         $reference = strtoupper('SN-' . date('Ymd') . '-' . random_int(1000, 9999));
 
-        session()->flash('booking', [
-            'reference'     => $reference,
-            'first_name'    => $validated['first_name'],
-            'last_name'     => $validated['last_name'],
-            'email'         => $validated['email'],
-            'phone'         => $validated['phone'],
-            'requests'      => $validated['requests'] ?? null,
-            'check_in'      => $checkIn,
-            'check_out'     => $checkOut,
-            'guests'        => $guests,
-            'nights'        => $nights,
+        $bookingData = [
+            'reference'       => $reference,
+            'first_name'      => $validated['first_name'],
+            'last_name'       => $validated['last_name'],
+            'email'           => $validated['email'],
+            'phone'           => $validated['phone'],
+            'requests'        => $validated['requests'] ?? null,
+            'check_in'        => $checkIn,
+            'check_out'       => $checkOut,
+            'guests'          => $guests,
+            'nights'          => $nights,
             'price_per_night' => $pricePerNight,
-            'multiplier'    => $multiplier,
-            'subtotal'      => $subtotal,
-            'tax'           => $tax,
-            'total'         => $total,
-        ]);
+            'multiplier'      => $multiplier,
+            'subtotal'        => $subtotal,
+            'tax'             => $tax,
+            'total'           => $total,
+            'hotel_id'        => $hotel->id,
+            'room_id'         => $room->id,
+            'hotel_slug'      => $hotel->slug,
+        ];
+
+        // Persist across the login/register redirect (not flash)
+        session(['pending_booking' => $bookingData]);
+
+        if (auth()->check()) {
+            Booking::create([
+                'user_id'   => auth()->id(),
+                'hotel_id'  => $hotel->id,
+                'room_id'   => $room->id,
+                'check_in'  => $checkIn,
+                'check_out' => $checkOut,
+                'guests'    => $guests,
+                'nights'    => $nights,
+                'subtotal'  => $subtotal,
+                'vat'       => $tax,
+                'total'     => $total,
+                'reference' => $reference,
+            ]);
+        }
 
         return redirect()->route('hotels.rooms.confirmation', [$hotel, $room]);
     }
@@ -94,10 +117,15 @@ class RoomController extends Controller
     {
         abort_if($room->hotel_id !== $hotel->id, 404);
 
-        $booking = session('booking');
+        $booking = session('pending_booking');
 
         if (! $booking) {
             return redirect()->route('hotels.show', $hotel);
+        }
+
+        // Logged-in users have their booking already saved; clear the pending entry
+        if (auth()->check()) {
+            session()->forget('pending_booking');
         }
 
         return view('hotels.confirmation', compact('hotel', 'room', 'booking'));

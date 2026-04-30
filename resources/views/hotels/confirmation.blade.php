@@ -3,7 +3,7 @@
     description="Your reservation has been confirmed. Thank you for booking with StayNest."
 >
 
-<div class="max-w-2xl mx-auto px-4 sm:px-6 py-6">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 py-6">
 
     {{-- Breadcrumb --}}
     <nav aria-label="Breadcrumb" class="mb-4">
@@ -35,107 +35,155 @@
         </span>
     </div>
 
-    {{-- Summary card --}}
-    <section aria-labelledby="summary-heading"
-             class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm mb-4">
+    <div class="@guest grid grid-cols-1 lg:grid-cols-3 gap-6 items-start @endguest">
 
-        <div class="px-5 py-3 border-b border-slate-200 bg-slate-900">
-            <h2 id="summary-heading" class="text-sm font-bold text-white">{{ $hotel->name }}
-                <span class="font-normal text-slate-300">&mdash; {{ $room->name }}</span>
-            </h2>
-        </div>
+        {{-- ── Main confirmation column ── --}}
+        <div class="@guest lg:col-span-2 @endguest">
 
-        <dl class="divide-y divide-slate-100 text-sm">
+            {{-- Summary card --}}
+            <section aria-labelledby="summary-heading"
+                     class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm mb-4">
 
-            <div class="flex justify-between items-baseline px-5 py-2">
-                <dt class="text-slate-600 shrink-0">Guest</dt>
-                <dd class="font-semibold text-slate-900 text-right">
-                    {{ $booking['first_name'] }} {{ $booking['last_name'] }}
-                </dd>
+                <div class="px-5 py-3 border-b border-slate-200 bg-slate-900">
+                    <h2 id="summary-heading" class="text-sm font-bold text-white">{{ $hotel->name }}
+                        <span class="font-normal text-slate-300">&mdash; {{ $room->name }}</span>
+                    </h2>
+                </div>
+
+                <dl class="divide-y divide-slate-100 text-sm">
+
+                    <div class="flex justify-between items-baseline px-5 py-2">
+                        <dt class="text-slate-600 shrink-0">Guest</dt>
+                        <dd class="font-semibold text-slate-900 text-right">
+                            {{ $booking['first_name'] }} {{ $booking['last_name'] }}
+                        </dd>
+                    </div>
+
+                    <div class="flex justify-between items-baseline px-5 py-2">
+                        <dt class="text-slate-600 shrink-0">Email</dt>
+                        <dd class="text-slate-900 text-right">{{ $booking['email'] }}</dd>
+                    </div>
+
+                    <div class="flex justify-between items-baseline px-5 py-2">
+                        <dt class="text-slate-600 shrink-0">Room</dt>
+                        <dd class="text-slate-900 text-right">
+                            {{ ucfirst($room->type) }} &middot; {{ $room->bed_type }} bed
+                        </dd>
+                    </div>
+
+                    <div class="flex justify-between items-baseline px-5 py-2">
+                        <dt class="text-slate-600 shrink-0">Check-in</dt>
+                        <dd class="text-slate-900 text-right">
+                            {{ \Carbon\Carbon::parse($booking['check_in'])->format('D, d M Y') }}
+                        </dd>
+                    </div>
+
+                    <div class="flex justify-between items-baseline px-5 py-2">
+                        <dt class="text-slate-600 shrink-0">Check-out</dt>
+                        <dd class="text-slate-900 text-right">
+                            {{ \Carbon\Carbon::parse($booking['check_out'])->format('D, d M Y') }}
+                        </dd>
+                    </div>
+
+                    <div class="flex justify-between items-baseline px-5 py-2">
+                        <dt class="text-slate-600 shrink-0">Duration</dt>
+                        <dd class="text-slate-900 text-right">
+                            {{ $booking['nights'] }} {{ Str::plural('night', $booking['nights']) }},
+                            {{ $booking['guests'] }} {{ Str::plural('guest', $booking['guests']) }}
+                        </dd>
+                    </div>
+
+                    <div class="flex justify-between items-baseline px-5 py-2">
+                        <dt class="text-slate-600 shrink-0">Subtotal</dt>
+                        <dd class="text-slate-900 text-right">£{{ number_format($booking['subtotal'], 2) }}</dd>
+                    </div>
+
+                    <div class="flex justify-between items-baseline px-5 py-2">
+                        <dt class="text-slate-600 shrink-0">VAT (20%)</dt>
+                        <dd class="text-slate-900 text-right">£{{ number_format($booking['tax'], 2) }}</dd>
+                    </div>
+
+                    {{-- Total row --}}
+                    <div class="flex justify-between items-baseline px-5 py-2.5 bg-slate-50">
+                        <dt class="font-bold text-slate-900 shrink-0">Total charged</dt>
+                        {{-- WCAG 1.4.6: blue-900 on slate-50 = 8.9:1 ✓ AAA --}}
+                        <dd class="font-bold text-blue-900 text-base text-right">
+                            £{{ number_format($booking['total'], 2) }}
+                        </dd>
+                    </div>
+
+                    @if ($booking['requests'])
+                    <div class="px-5 py-2">
+                        <dt class="text-slate-600 mb-0.5">Special requests</dt>
+                        <dd class="text-slate-900 leading-relaxed">{{ $booking['requests'] }}</dd>
+                    </div>
+                    @endif
+
+                </dl>
+            </section>
+
+            {{-- Actions --}}
+            <div class="flex gap-3 mb-4">
+                <a href="{{ route('home') }}"
+                   class="min-h-[44px] flex items-center px-6 bg-blue-900 hover:bg-blue-800
+                          text-white font-semibold rounded text-sm transition-colors">
+                    Back to Home
+                </a>
+                <a href="{{ route('hotels.index') }}"
+                   class="min-h-[44px] flex items-center px-6 border-2 border-slate-300
+                          text-slate-900 font-semibold rounded hover:border-slate-500
+                          transition-colors text-sm">
+                    Browse Hotels
+                </a>
             </div>
 
-            <div class="flex justify-between items-baseline px-5 py-2">
-                <dt class="text-slate-600 shrink-0">Email</dt>
-                <dd class="text-slate-900 text-right">{{ $booking['email'] }}</dd>
+            {{-- Prototype note --}}
+            <p class="text-xs text-slate-500">
+                Prototype only &mdash; no payment processed and no real booking made.
+            </p>
+
+        </div>{{-- /main column --}}
+
+        {{-- ── Guest: save booking prompt ── --}}
+        @guest
+        <aside aria-labelledby="save-booking-heading" class="lg:col-span-1">
+            <div class="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden">
+                <div class="px-5 py-3 bg-blue-900">
+                    <h2 id="save-booking-heading" class="text-sm font-bold text-white">
+                        Save your booking
+                    </h2>
+                </div>
+                <div class="px-5 py-5">
+                    <p class="text-sm text-slate-700 mb-4 leading-relaxed">
+                        Create a free account to keep track of all your bookings in one place
+                        and access them any time.
+                    </p>
+                    <div class="space-y-3">
+                        <a href="{{ route('register') }}"
+                           class="flex items-center justify-center min-h-[44px] px-4
+                                  bg-blue-900 hover:bg-blue-800 text-white text-sm font-semibold
+                                  rounded-lg transition-colors
+                                  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-900">
+                            Create an account
+                        </a>
+                        <a href="{{ route('login') }}"
+                           class="flex items-center justify-center min-h-[44px] px-4
+                                  border-2 border-slate-300 hover:border-slate-500
+                                  text-slate-900 text-sm font-semibold rounded-lg
+                                  transition-colors
+                                  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900">
+                            Sign in to existing account
+                        </a>
+                    </div>
+                    <p class="text-xs text-slate-400 mt-4 leading-relaxed">
+                        Already have a booking reference? You can use it to look up your reservation.
+                    </p>
+                </div>
             </div>
+        </aside>
+        @endguest
 
-            <div class="flex justify-between items-baseline px-5 py-2">
-                <dt class="text-slate-600 shrink-0">Room</dt>
-                <dd class="text-slate-900 text-right">
-                    {{ ucfirst($room->type) }} &middot; {{ $room->bed_type }} bed
-                </dd>
-            </div>
-
-            <div class="flex justify-between items-baseline px-5 py-2">
-                <dt class="text-slate-600 shrink-0">Check-in</dt>
-                <dd class="text-slate-900 text-right">
-                    {{ \Carbon\Carbon::parse($booking['check_in'])->format('D, d M Y') }}
-                </dd>
-            </div>
-
-            <div class="flex justify-between items-baseline px-5 py-2">
-                <dt class="text-slate-600 shrink-0">Check-out</dt>
-                <dd class="text-slate-900 text-right">
-                    {{ \Carbon\Carbon::parse($booking['check_out'])->format('D, d M Y') }}
-                </dd>
-            </div>
-
-            <div class="flex justify-between items-baseline px-5 py-2">
-                <dt class="text-slate-600 shrink-0">Duration</dt>
-                <dd class="text-slate-900 text-right">
-                    {{ $booking['nights'] }} {{ Str::plural('night', $booking['nights']) }},
-                    {{ $booking['guests'] }} {{ Str::plural('guest', $booking['guests']) }}
-                </dd>
-            </div>
-
-            <div class="flex justify-between items-baseline px-5 py-2">
-                <dt class="text-slate-600 shrink-0">Subtotal</dt>
-                <dd class="text-slate-900 text-right">£{{ number_format($booking['subtotal'], 2) }}</dd>
-            </div>
-
-            <div class="flex justify-between items-baseline px-5 py-2">
-                <dt class="text-slate-600 shrink-0">VAT (20%)</dt>
-                <dd class="text-slate-900 text-right">£{{ number_format($booking['tax'], 2) }}</dd>
-            </div>
-
-            {{-- Total row --}}
-            <div class="flex justify-between items-baseline px-5 py-2.5 bg-slate-50">
-                <dt class="font-bold text-slate-900 shrink-0">Total charged</dt>
-                {{-- WCAG 1.4.6: blue-900 on slate-50 = 8.9:1 ✓ AAA --}}
-                <dd class="font-bold text-blue-900 text-base text-right">
-                    £{{ number_format($booking['total'], 2) }}
-                </dd>
-            </div>
-
-            @if ($booking['requests'])
-            <div class="px-5 py-2">
-                <dt class="text-slate-600 mb-0.5">Special requests</dt>
-                <dd class="text-slate-900 leading-relaxed">{{ $booking['requests'] }}</dd>
-            </div>
-            @endif
-
-        </dl>
-    </section>
-
-    {{-- Actions --}}
-    <div class="flex gap-3 mb-4">
-        <a href="{{ route('home') }}"
-           class="min-h-[44px] flex items-center px-6 bg-blue-900 hover:bg-blue-800
-                  text-white font-semibold rounded text-sm transition-colors">
-            Back to Home
-        </a>
-        <a href="{{ route('hotels.index') }}"
-           class="min-h-[44px] flex items-center px-6 border-2 border-slate-300
-                  text-slate-900 font-semibold rounded hover:border-slate-500
-                  transition-colors text-sm">
-            Browse Hotels
-        </a>
-    </div>
-
-    {{-- Prototype note --}}
-    <p class="text-xs text-slate-500">
-        Prototype only &mdash; no payment processed and no real booking made.
-    </p>
+    </div>{{-- /grid --}}
 
 </div>
 

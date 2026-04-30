@@ -166,9 +166,17 @@
             }
 
             attachEvents() {
-                this.input.addEventListener('focus', () => this.showSuggestions());
-                this.input.addEventListener('click', () => this.showSuggestions());
-                this.input.addEventListener('input', () => this.showSuggestions());
+                this.input.addEventListener('focus', () => {
+                    if (!this.input.validationMessage) this.showSuggestions();
+                });
+                this.input.addEventListener('click', () => {
+                    this.input.setCustomValidity('');
+                    this.showSuggestions();
+                });
+                this.input.addEventListener('input', () => {
+                    this.input.setCustomValidity('');
+                    this.showSuggestions();
+                });
                 this.input.addEventListener('blur', () => setTimeout(() => this.close(), 150));
                 this.input.addEventListener('keydown', (e) => this.handleKeyboard(e));
 
@@ -352,6 +360,7 @@
                 if (!this.input.value.trim()) {
                     e.preventDefault();
                     this.input.setCustomValidity('Please enter a destination to start searching.');
+                    this.close();
                     this.input.reportValidity();
                 } else {
                     this.input.setCustomValidity('');

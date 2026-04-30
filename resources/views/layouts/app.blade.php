@@ -9,7 +9,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-white text-slate-900 font-sans antialiased min-h-screen flex flex-col">
+<body class="bg-slate-100 text-slate-900 font-sans antialiased min-h-screen flex flex-col">
 
     {{-- WCAG 2.4.1: Skip Navigation Link — allows keyboard users to bypass repeated nav --}}
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -46,7 +46,7 @@
     {{-- Main content landmark — target for skip link --}}
     {{-- tabindex="-1" allows programmatic focus from skip link --}}
     <main id="main-content" tabindex="-1" class="flex-1 outline-none">
-        @yield('content')
+        {{ $slot }}
     </main>
 
     {{-- Site footer --}}

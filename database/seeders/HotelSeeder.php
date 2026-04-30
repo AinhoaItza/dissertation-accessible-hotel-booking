@@ -110,7 +110,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'Immortalised by Lost in Translation, the Park Hyatt occupies the top 14 floors of the Shinjuku Park Tower. Floor-to-ceiling views of Mount Fuji, a 20-metre pool bathed in natural light, and the legendary New York Bar.',
                 'image_path'      => 'https://images.unsplash.com/photo-1745595330140-9ee41e4cc395?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dG9reW8lMjBob3RlbCUyMHRyYWRpdGlvbmFsfGVufDB8fDB8fHww',
                 'image_alt'       => 'Park Hyatt Tokyo in the Shinjuku Park Tower with the city at night below',
-                'city_image_path' => 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=900&auto=format&fit=crop&q=60',
+                'city_image_path' => 'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                 'amenities'    => ['Free WiFi', 'New York Bar & Grill', 'Heated Pool & Gym', 'Onsen Spa', 'Traditional Sauna', 'Concierge', 'Airport Limousine', 'Tea Ceremony', '24-Hour Room Service', 'Breakfast Included', 'Smoking Permitted (Designated Areas)'],
             ],
 
@@ -513,7 +513,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'Positioned between the Imperial Palace and Ginza, The Peninsula Tokyo occupies a 24-storey tower commanding views of the Imperial gardens and city skyline. The Peter rooftop bar, Michelin-recognised Hei Fung Terrace, and the Peninsula Spa define Japanese urban luxury at its most refined.',
                 'image_path'      => 'https://images.unsplash.com/photo-1723382056183-823d065ae8ed?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8a3lvdG8lMjB0cmFkaWNvbmFsJTIwaG90ZWx8ZW58MHx8MHx8fDA%3D',
                 'image_alt'       => 'The Peninsula Tokyo tower between the Imperial Palace and Ginza at night',
-                'city_image_path' => 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=900&auto=format&fit=crop&q=60',
+                'city_image_path' => 'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                 'amenities'    => ['Free WiFi', 'Peter Rooftop Bar', 'Hei Fung Terrace', 'Peninsula Spa', 'Heated Pool', 'Fitness Centre', 'Concierge', 'Limousine Service', 'Breakfast Included', 'Non-Smoking Property'],
             ],
 
@@ -531,7 +531,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'Aman\'s debut in Japan occupies the top six floors of the Otemachi Tower, with floor-to-ceiling views of the Imperial Palace gardens and Mount Fuji. The 30-metre cedar and stone pool, Arva restaurant, and the Aman Spa blend Japanese minimalism with Aman\'s legendary silence.',
                 'image_path'      => 'https://plus.unsplash.com/premium_photo-1723983555804-4f76968a2a2d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8a3lvdG8lMjB0cmFkaWNvbmFsJTIwaG90ZWx8ZW58MHx8MHx8fDA%3D',
                 'image_alt'       => 'Aman Tokyo in the Otemachi Tower with Imperial Palace garden views',
-                'city_image_path' => 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=900&auto=format&fit=crop&q=60',
+                'city_image_path' => 'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3DU',
                 'amenities'    => ['Free WiFi', 'Arva Restaurant', 'The Restaurant', '30m Cedar & Stone Pool', 'Aman Spa', 'Traditional Sauna', 'Yoga Studio', 'Concierge', 'Limousine Service', 'Non-Smoking Property'],
             ],
 
@@ -549,7 +549,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'Built within the UNESCO-listed Tokyo Station building, The Tokyo Station Hotel offers a genuinely unique stay inside a Taisho-era red-brick national treasure completed in 1914. Rooms are comfortable and well-equipped, and the convenience of the station location is unmatched for rail travel across Japan. The building\'s extraordinary Taisho-era architecture is the main draw — an accessible four-star option with real historical character.',
                 'image_path'      => 'https://images.unsplash.com/photo-1549693578-d683be217e58?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dG9reW98ZW58MHx8MHx8fDA%3D',
                 'image_alt'       => 'The Tokyo Station Hotel inside the historic red-brick Tokyo Station building',
-                'city_image_path' => 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=900&auto=format&fit=crop&q=60',
+                'city_image_path' => 'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                 'amenities'    => ['Free WiFi', 'Brasserie 1899', 'Oak Door Bar', 'Fitness Centre', 'Concierge', 'Historic Architecture', 'Smoking Permitted (Designated Areas)'],
             ],
 
@@ -567,7 +567,7 @@ class HotelSeeder extends Seeder
                 'description'  => 'A modern business hotel in Toranomon with clean, functional rooms and easy access to the subway. The rooftop bar offers city views and the Tavern restaurant serves straightforward meals. A practical base for exploring Tokyo without the luxury price tag.',
                 'image_path'      => 'https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRva3lvfGVufDB8fDB8fHww',
                 'image_alt'       => 'Andaz Tokyo Toranomon Hills with Tokyo Bay and Rainbow Bridge views',
-                'city_image_path' => 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=900&auto=format&fit=crop&q=60',
+                'city_image_path' => 'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                 'amenities'    => ['Free WiFi', 'Rooftop Bar', 'Tavern Restaurant', 'Studio Wellness', 'Tokyo Bay View', 'Fitness Centre', 'Concierge', 'Valet Parking', 'Non-Smoking Property'],
             ],
 

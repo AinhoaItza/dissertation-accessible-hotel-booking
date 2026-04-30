@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\RoomController;
@@ -26,8 +27,10 @@ Route::middleware('guest')->group(function () {
 
 // ── Auth routes (authenticated users only) ───────────────────────────────
 Route::middleware('auth')->group(function () {
-    Route::post('/logout',  [AuthController::class, 'logout'])->name('logout');
-    Route::get('/profile',  [AuthController::class, 'profile'])->name('profile');
+    Route::post('/logout',   [AuthController::class, 'logout'])->name('logout');
+    Route::get('/profile',   [AuthController::class, 'profile'])->name('profile');
+    Route::put('/profile/password', [AuthController::class, 'updatePassword'])->name('profile.password');
+    Route::get('/bookings',  [BookingController::class, 'index'])->name('bookings.index');
 });
 
 Route::prefix('hotels')->name('hotels.')->group(function () {

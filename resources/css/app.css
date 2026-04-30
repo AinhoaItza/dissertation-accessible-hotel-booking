@@ -12,13 +12,13 @@
 
 /*
  * WCAG 2.4.13 Focus Appearance (AAA)
- * 3px solid outline, 3px offset.
+ * 2px solid outline, 2px offset.
  * blue-900 (#1e3a8a) on white = 8.9:1 contrast ratio (minimum required: 3:1 ✓).
  */
 :focus-visible {
-    outline: 3px solid #1e3a8a;
-    outline-offset: 3px;
-    border-radius: 3px;
+    outline: 2px solid #1e3a8a;
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 /*
@@ -49,8 +49,8 @@
 
 .skip-link:focus {
     top: 0;
-    outline: 3px solid #ffffff;
-    outline-offset: 3px;
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
 }
 
 /*

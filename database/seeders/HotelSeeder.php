@@ -690,16 +690,16 @@ class HotelSeeder extends Seeder
 
             'hotel-arts-barcelona' => [
                 [
-                    'name'            => 'Sea View King Room',
+                    'name'            => 'City View King Room',
                     'type'            => 'standard',
-                    'description'     => 'Floor-to-ceiling windows frame the blue Mediterranean from a high floor in the Arts tower. Contemporary design, Portuguese marble bathroom, and direct beach access.',
+                    'description'     => 'Floor-to-ceiling windows frame the Barcelona skyline from a high floor in the Arts tower. Contemporary design, Portuguese marble bathroom, and direct beach access.',
                     'price_per_night' => 390.00,
                     'capacity'        => 2,
                     'bed_type'        => 'King',
                     'size_sqm'        => 34,
-                    'amenities'       => ['King Bed', 'Mediterranean Sea View', 'Marble Bathroom', 'Smart TV', 'Nespresso', 'Minibar', 'Beach Towels'],
+                    'amenities'       => ['King Bed', 'City View', 'Marble Bathroom', 'Smart TV', 'Nespresso', 'Minibar', 'Beach Towels'],
                     'image_path'      => 'https://images.unsplash.com/photo-1631049552240-59c37f38802b?w=800&h=500&fit=crop&auto=format&q=80',
-                    'image_alt'       => 'Sea View King Room at Hotel Arts Barcelona with Mediterranean panorama',
+                    'image_alt'       => 'City View King Room at Hotel Arts Barcelona with Barcelona skyline panorama',
                     'is_available'    => true,
                 ],
                 [
@@ -1680,12 +1680,12 @@ class HotelSeeder extends Seeder
                 [
                     'name'            => 'Mandarin Suite',
                     'type'            => 'suite',
-                    'description'     => 'The hotel\'s most prestigious address: a penthouse with a private rooftop pool, views from Montjuïc to the sea, a formal dining room for ten, and a dedicated butler team. The pinnacle of Barcelona luxury on the Passeig de Gràcia.',
+                    'description'     => 'The hotel\'s most prestigious address: a penthouse with a private rooftop pool, panoramic views from Montjuïc to the Sagrada Família, a formal dining room for ten, and a dedicated butler team. The pinnacle of Barcelona luxury on the Passeig de Gràcia.',
                     'price_per_night' => 3200.00,
                     'capacity'        => 4,
                     'bed_type'        => 'Super King',
                     'size_sqm'        => 220,
-                    'amenities'       => ['Two Bedrooms', 'Private Rooftop Pool', 'Montjuïc to Sea View', 'Dining for 10', '24-Hr Butler', 'Private Chef', 'Rolls-Royce Transfer'],
+                    'amenities'       => ['Two Bedrooms', 'Private Rooftop Pool', 'Panoramic City Views', 'Dining for 10', '24-Hr Butler', 'Private Chef', 'Rolls-Royce Transfer'],
                     'image_path'      => 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&h=500&fit=crop&auto=format&q=80',
                     'image_alt'       => 'Mandarin Suite penthouse at Mandarin Oriental Barcelona with private rooftop pool',
                     'is_available'    => true,
@@ -1710,7 +1710,7 @@ class HotelSeeder extends Seeder
                 [
                     'name'            => 'Superior Room',
                     'type'            => 'deluxe',
-                    'description'     => 'A larger room with an ornate Domènech i Montaner bay window framing the Passeig de Gràcia. Original mosaic floors, a soaking tub, and priority access to the rooftop pool with views from Tibidabo to the sea.',
+                    'description'     => 'A larger room with an ornate Domènech i Montaner bay window framing the Passeig de Gràcia. Original mosaic floors, a soaking tub, and priority access to the rooftop pool with views from Tibidabo to the Sagrada Família.',
                     'price_per_night' => 380.00,
                     'capacity'        => 2,
                     'bed_type'        => 'King',
@@ -1736,7 +1736,7 @@ class HotelSeeder extends Seeder
                 [
                     'name'            => 'Grand Suite',
                     'type'            => 'suite',
-                    'description'     => 'The grandest address in Casa Fuster: two floors within the original tower, a private terrace with panoramic Barcelona views from the Pyrenees to the sea, and access to the private Café Vienès jazz bar after hours.',
+                    'description'     => 'The grandest address in Casa Fuster: two floors within the original tower, a private terrace with panoramic Barcelona views from the Pyrenees to Montjuïc, and access to the private Café Vienès jazz bar after hours.',
                     'price_per_night' => 1400.00,
                     'capacity'        => 4,
                     'bed_type'        => 'Super King',

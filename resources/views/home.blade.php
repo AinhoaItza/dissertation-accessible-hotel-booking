@@ -67,7 +67,7 @@
                 </div>
                 <h3 class="font-bold text-slate-900 text-lg mb-2">Visible Focus</h3>
                 <p class="text-slate-700 text-sm leading-relaxed">
-                    A clear, high-contrast <strong>3px blue focus ring</strong> appears around every
+                    A clear, high-contrast <strong>2px blue focus ring</strong> appears around every
                     interactive element when navigating by keyboard (WCAG 2.4.13 AAA).
                 </p>
             </li>
